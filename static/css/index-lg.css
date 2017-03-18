@@ -1,0 +1,291 @@
+/*Universals*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: "Oswald", helvetica, arial sans-serif;
+  font-weight: 300;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height:100%;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  color: white;
+}
+header {
+  position: fixed;
+  width: 100%;
+  height: 72px;
+  padding: 20px 3% 0px 3%;
+  background: transparent;
+  z-index: 1;
+}
+header a  { 
+  color: white;
+  font-size: 1.4em;
+  font-weight: 900;
+  z-index: 1;
+}
+#events-icon {
+  position: fixed;
+  bottom: 10px;
+  left: 3%;
+}
+#merch-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 3%;
+}
+footer {
+  font-family: "Raleway";
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: 150px;
+  padding: 20px 55px 20px 55px;
+  text-transform: uppercase;
+}
+footer a {
+  font-family: "Raleway";
+  color: white;
+  text-transform: uppercase;
+}
+footer button {
+  border: 1px solid white;
+  padding: 2px 10px;
+}
+ul {
+  height: 100%;
+  overflow: auto;
+}
+
+/* Header */
+#home-icon {
+  font-color: white;  
+}
+.nyc {
+  font-weight: 900;
+  -webkit-text-stroke-color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.75px;
+}
+
+/*Body*/
+.container {
+  position: relative;
+}
+#theme-background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-position: center center;
+  background-size: contain;
+  background-image: url("../../Assets/summer_festival.jpg");
+
+}
+#intro-container {
+  width: 100%;
+}
+#intro {
+  width: 100%;
+  background-image: url("../../Assets/site_intro.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.intro-cover {
+  position: absolute;
+  background-color: black;
+  width: 30%;
+  height: 100%;
+  top: 0;
+}
+.intro-cover-right {
+  right: 0;
+}
+#party {
+  width: 100%;
+  opacity: 0.5;
+  background: black;
+}
+#party-callout {
+  font-size: 2em;
+  padding-top: 40px;
+  color: white;
+}
+#events {
+  width: 100%;
+  opacity: 1;
+  background: black;
+}
+#mission {
+  width: 100%;
+  opacity: 1;
+  background: white;
+}
+
+/*Card Sections*/
+.card-container {
+  position: relative;
+  background-repeat: no-repeat;
+  /*-webkit-mask: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))*/
+}
+.event-nav-container {
+  min-height: 45px;
+  width: 100%;
+  display: block;
+  background: green;
+}
+.card-section {
+  position: relative;
+  text-align: center;
+  margin-bottom: 5px;
+  z-index: 0;
+}
+.next-section-nav {
+  position: absolute;
+  cursor: pointer;
+  bottom: 10px;
+  right: 50%;
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid red;
+}
+
+/*Events Navigation*/
+.events-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+}
+.events-nav-bar {
+  width: 55px;
+  height: 20px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+
+
+/* Hamburger Nav Bar */
+#hamburger-nav {
+  float: right;
+  width: 55px;
+  height: 20px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#hamburger-nav span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: none;
+  border: 1px solid white;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#hamburger-nav span:nth-child(1) {
+  top: 0px;
+}
+
+#hamburger-nav span:nth-child(2) {
+  top: 10px;
+}
+
+#hamburger-nav span:nth-child(3) {
+  top: 20px;
+}
+
+#hamburger-nav.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+/*Helpers*/
+.hide {
+  display: none;
+}
+
+/*Owl Carousel Overwrites*/
+.owl-theme .owl-dots .owl-dot span {
+  border-radius: 0px;
+  width: 35px;
+  height: 5px;
+  margin: 5px 2px;
+}
+.owl-dots {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.owl-dot.active span {
+  border: 1px solid white;
+}

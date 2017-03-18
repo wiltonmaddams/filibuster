@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--  Essential META Tags -->
+  <meta property="og:title" content="Filibuster NYC">
+  <meta property="og:description" content="We don't care where you're from, what you look like, or who you love... We just care that you feel the same way.">
+  <meta property="og:image" content="http://euro-travel-example.com/thumbnail.jpg">
+  <meta property="og:url" content="http://filibuster.nyc">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!--  Non-Essential, But Recommended -->
+  <meta property="og:site_name" content="European Travel, Inc.">
+  <meta name="twitter:image:alt" content="Alt text for image">
+
+  <!--  Non-Essential, But Required for Analytics -->
+  <meta property="fb:app_id" content="your_app_id" />
+  <meta name="twitter:site" content="@website-username">
+
+  <title>Filibuster NYC</title>
+
+  <!-- FILIBUSTER FAVICON HERE -->
+  <link rel="shortcut icon" type="image/x-icon" href="//cdn.shopify.com/shopify-marketing_assets/static/shopify-favicon.png">
+
+  <!--BEGIN CSS-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.shopify.com/s/files/1/0384/1093/t/6/assets/timber.scss.css?14316218983674294644" media="all" />
+  <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./static/css/libraries/assets/owl.carousel.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./static/css/libraries/assets/owl.theme.default.min.css"/>
+  <link rel="stylesheet" type="text/css" href="./static/css/libraries/animate/animate.css"/>
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" type="text/css" href="./static/css/index-base.css" />
+  <!-- MEDIA QUERY <= 800 -->
+  <link rel="stylesheet" type="text/css" media="screen and (max-width: 799px)" href="./static/css/index-sm-med.css" />
+  <!-- MEDIA QUERY > 800 -->
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 800px)" href="./static/css/index-lg.css" />
+  <!--END CSS-->
+
+  <!--BEGIN JAVASCRIPT-->
+
+  <!-- EXTERNAL LIBRARIES -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>  
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+  <script type"text/javascript" src="./static/js/libraries/animateText.js"></script>
+  <script type"text/javascript" src="./static/js/libraries/owl.carousel.min.js"></script>
+  <!-- END EXTERNAL LIBRARIES -->
+
+  <!-- INTERNAL LIBRARIES -->
+  <script type="text/javascript" src="./static/js/jx.js"></script>
+  <script type="text/javascript" src="./static/js/jx.ajax.js"></script>
+  <!-- END INTERNAL LIBRARIES -->
+
+  <!--END JAVASCRIPT-->
+
+  <!-- WEB FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700,900|Raleway:300i,400" rel="stylesheet">
+  <!-- END WEB FONTS -->
+</head>
+<body>
+  <header>
+    <a id="home-icon" href="#">FILIBUSTER <span class="nyc">NYC</span></a>
+      <!-- Hamburger Navigation-->
+      <!-- <div id="hamburger-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div> -->
+    <a id="merch-icon" href="#merch">Merchandise</a>
+    <a id="events-icon" href="#events">Events</a>
+  </header>
+  <div class="container">
+    <div class="card-section" id="theme-background">
+    </div>
+    <div class="card-section" id="intro-container">
+      <div id="intro"></div>
+      <div class="intro-cover"></div>
+      <div class="intro-cover intro-cover-right"></div>
+    </div>
+    <div class="card-section" id="party">
+      <!-- <h4 id="party-callout" style="display: none;">Party like you mean it</h4> -->
+    </div>
+    <div class="card-section" id="mission">
+      <ul id="mission-statement">
+        <li id="intro-1">
+          Who we are and<br>what we're trying to do
+        </li>
+        <li id="intro-2">
+          Filibuster NYC creates outdoor experiences,<br>because the sun is the greatest disco ball ever created.
+        </li>
+        <li id="intro-3">
+          We don't care where you're from, what you look like,<br> or who you love... We just care that you feel the same way.
+        </li>
+      </ul>
+    </div>
+    
+    <!-- EVENT OVERVIEW CAROUSEL -->
+    <div class="card-section owl-carousel owl-theme" id="events-overview" data-bind="foreach: events">
+      <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
+        <h5 data-bind="text: time"></h5>
+        <h2 data-bind="text: title"></h2>
+        <h6 data-bind="text: slogan"></h6>
+        <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
+      </div>
+    </div>
+
+    <div data-bind="foreach: events">
+      <!-- if: title != $root.activeEvent.title -->
+      <div class="card-section">
+        <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
+          <h5 data-bind="text: time"></h5>
+          <h2 data-bind="text: title"></h2>
+          <h2 data-bind="text: $root.activeEvent.slogan"></h2>
+          <h6 data-bind="text: slogan"></h6>
+          <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
+        </div>
+      </div>      
+      <!-- /ko -->
+    </div>
+
+
+    <!-- EVENT DETAILS CAROUSEL -->
+<!--     <div class="card-section owl-carousel owl-theme" id="event-details" data-bind="with: $root.activeEvent">
+      <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
+        <h3 data-bind="text: title"></h3>
+        <h5 data-bind="text: address"></h5>
+        <h5 data-bind="text: season"></h5>
+        <h5 data-bind="text: time"></h5>
+        <h6 data-bind="text: description"></h6>
+        <img data-bind="src: source" />
+        <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
+      </div>
+    </div> -->
+
+    <!-- EVENT TICKETS CAROUSEL -->
+<!--     <div class="card-section owl-carousel event-tickets owl-theme" id="event-tickets" data-bind="with: $root.activeEvent">
+      <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
+        <h2 data-bind="text: title">Title</h2>
+        <h5 data-bind="text: slogan">Answer the Call. Come get weird.</h5>
+        <img data-bind="src: source" />
+        <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
+        <a href="#">Facebook share</a>
+        <a href="#">Instagram share</a>
+        <a href="#">Twitter share</a>
+      </div>
+    </div> -->
+
+    <!-- If we want to use Spotify timber grid layout, probably just add grid and grid__item classes to card-section and card-container classes abobe -->
+
+    <!-- SECTION EVENT DETAILS HIGHLIGHT -->
+<!--     <div class="grid">
+      <div class="grid__item">
+      </div>
+    </div>
+    <!-- SECTION EVENT DETAILS IN DEPTH -->
+   <!--  <div class="grid">
+      <div class="grid__item">
+      </div>
+    </div> -->
+    <!-- SECTION EVENT ARTISTS GALLERY
+    <div class="grid">
+      <div class="grid__item">
+      </div>
+    </div>
+    SECTION EVENT PHOTO GALLERY
+    <div class="grid">
+      <div class="grid__item">
+      </div>
+    </div>
+    <!-- SECTION CALL TO ACTION
+    <div class="grid">
+      <div class="grid__item">
+      </div>
+    </div> -->
+    <!-- <div class="card-section" id="">
+    </div> -->
+    <div class="card-section" id="in-touch">
+      <h1>Keep up with us. We'll send you some tight stuff.</h1>
+      <!-- Begin MailChimp Signup Form -->
+      <div id="mc_embed_signup">
+        <form action="//nyc.us10.list-manage.com/subscribe/post?u=5c0c66c784e40c1633c46fa05&amp;id=0791cf188e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            <div class="mc-field-group">
+              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email address" />
+            </div>
+            <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_5c0c66c784e40c1633c46fa05_0791cf188e" tabindex="-1" value="">
+            </div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          </div>
+        </form>
+      </div>
+      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';fnames[6]='MMERGE6';ftypes[6]='text';fnames[7]='MMERGE7';ftypes[7]='text';fnames[8]='MMERGE8';ftypes[8]='text';fnames[9]='MMERGE9';ftypes[9]='text';fnames[10]='MMERGE10';ftypes[10]='text';fnames[11]='MMERGE11';ftypes[11]='text';fnames[12]='MMERGE12';ftypes[12]='text';fnames[13]='MMERGE13';ftypes[13]='radio';fnames[14]='MMERGE14';ftypes[14]='dropdown';fnames[15]='MMERGE15';ftypes[15]='text';fnames[16]='TEXTYUI_3';ftypes[16]='text';fnames[17]='TEXTAREAY';ftypes[17]='text';fnames[18]='CHECKBOXY';ftypes[18]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <!--End mc_embed_signup-->
+    </div>
+    <footer>
+      <p>Come join all your friends.</p>
+      <a href="mailto:contact@filibuster.nyc"></a>
+      <a href="#events">Events</a>
+      <a href="#merch">Merchandise</a>
+      <a href="#">About</a>
+      <span>&copy; 2017 Filibuster NYC</span>
+    </footer>
+  </div>
+
+  <!-- Second footer? -->
+  <script type="text/javascript" src="./static/js/dataModel.js"></script>
+  <script type="text/javascript" src="./static/js/jx.controllers.index.js"></script>
+</body>
+</html>
