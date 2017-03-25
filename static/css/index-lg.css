@@ -1,117 +1,15 @@
-/*Universals*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-family: "Oswald", helvetica, arial sans-serif;
-  font-weight: 300;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-html, body {
-  width: 100%;
-  height:100%;
-}
-a {
-  text-decoration: none;
-  cursor: pointer;
-}
-a:hover {
-  color: white;
-}
-header {
-  position: fixed;
-  width: 100%;
-  height: 72px;
-  padding: 20px 3% 0px 3%;
-  background: transparent;
-  z-index: 1;
-}
-header a  { 
-  color: white;
-  font-size: 1.4em;
-  font-weight: 900;
-  z-index: 1;
-}
-#events-icon {
-  position: fixed;
-  bottom: 10px;
-  left: 3%;
-}
-#merch-icon {
-  position: fixed;
-  bottom: 10px;
-  right: 3%;
-}
-footer {
-  font-family: "Raleway";
-  color: white;
-  background-color: black;
-  width: 100%;
-  height: 150px;
-  padding: 20px 55px 20px 55px;
-  text-transform: uppercase;
-}
-footer a {
-  font-family: "Raleway";
-  color: white;
-  text-transform: uppercase;
-}
-footer button {
-  border: 1px solid white;
-  padding: 2px 10px;
-}
-ul {
-  height: 100%;
-  overflow: auto;
-}
+/****************************
+  STYLES : LARGE BREAKPOINT 
+*****************************/
 
-/* Header */
-#home-icon {
-  font-color: white;  
-}
-.nyc {
-  font-weight: 900;
-  -webkit-text-stroke-color: white;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 0.75px;
-}
 
-/*Body*/
-.container {
-  position: relative;
-}
-#theme-background {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  background-position: center center;
-  background-size: contain;
-  background-image: url("../../Assets/summer_festival.jpg");
-
-}
 #intro-container {
   width: 100%;
 }
+
 #intro {
   width: 100%;
-  background-image: url("../../Assets/site_intro.png");
+  background-image: url("../../assets/site_intro.png");
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -126,6 +24,23 @@ ul {
 .intro-cover-right {
   right: 0;
 }
+
+
+#theme-background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-position: center center;
+  background-size: contain;
+  background-image: url("../../assets/summer_festival.jpg");
+}
+
+
+
+
+
 #party {
   width: 100%;
   opacity: 0.5;

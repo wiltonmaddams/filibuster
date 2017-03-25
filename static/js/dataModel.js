@@ -6,6 +6,7 @@ function Event(eventData) {
 	self.address = eventData.address;
 	self.time = eventData.time;
 	self.source = eventData.source;
+	self.images = eventData.images;
 	self.description = eventData.description;
 	self.theme = eventData.theme;
 }
@@ -19,7 +20,10 @@ function filiViewModel() {
 			"season": "Spring 2017",
 			"address": "173 Morgan Ave. Brooklyn, NY 11206",
 			"time": "2-8pm",
-			"source": "./Assets/background-1.jpg",
+			"img_mobile": "./assets/event_sunset-sounds_background.png",
+			"img_foreground": "./assets/event_sunset-sounds_background_lg.png",
+			"img_midground": "./assets/event_sunset-sounds_midground_lg.png",
+			"source": "./assets/event_sunset-sounds_background_lg.png",
 			"description": "Mating Call this is an example of a long description. Mating Call this is an example of a long description.",
 			"theme": "purple"
 		},
@@ -29,17 +33,23 @@ function filiViewModel() {
 			"season": "Summer 2017",
 			"address": "A field",
 			"time": "2-9pm",
-			"source": "./Assets/background-2.jpg",
+			"img_mobile": "./assets/event_sunset-sounds_background.png",
+			"img_foreground": "./assets/event_sunset-sounds_background_lg.png",
+			"img_midground": "./assets/event_sunset-sounds_midground_lg.png",
+			"source": "./assets/event_sunset-sounds_background_lg.png",
 			"description": "Sunset Sounds this is an example of a long description. Sunset Sounds this is an example of a long description.",
 			"theme": "red"
 		},
 		{
-			"title": "Current Event", 
+			"title": "SQUADron", 
 			"slogan": "Float on.",
 			"season": "Fall 2017",
 			"address": "A river",
 			"time": "2-10pm",
-			"source": "./Assets/background-3.jpg",
+			"img_mobile": "./assets/event_sunset-sounds_background.png",
+			"img_foreground": "./assets/event_sunset-sounds_background_lg.png",
+			"img_midground": "./assets/event_sunset-sounds_midground_lg.png",
+			"source": "./assets/event_sunset-sounds_background_lg.png",
 			"description": "Current Event this is an example of a long description. Current Event this is an example of a long description.",
 			"theme": "green"
 		},
@@ -49,7 +59,10 @@ function filiViewModel() {
 			"season": "Winter 2017",
 			"address": "The Well",
 			"time": "2-11pm",
-			"source": "./Assets/background-4.jpg",
+			"img_mobile": "./assets/event_sunset-sounds_background.png",
+			"img_foreground": "./assets/event_sunset-sounds_background_lg.png",
+			"img_midground": "./assets/event_sunset-sounds_midground_lg.png",
+			"source": "./assets/event_sunset-sounds_background_lg.png",
 			"description": "Fear Garden this is an example of a long description. Fear Garden this is an example of a long description.",
 			"theme": "black"
 		}

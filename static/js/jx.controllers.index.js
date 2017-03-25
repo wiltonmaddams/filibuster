@@ -10,7 +10,7 @@ jx.define('jx.controllers.index', {
         "click": this.onProceedToNextSection
       }
     });
-    this.introAnimated = false;
+    this.introAnimated = true;
     this.sectionHeight = $(window).height();
   },
   onAnimateIntro: function() {

@@ -23,10 +23,10 @@
   <title>Filibuster NYC</title>
 
   <!-- FILIBUSTER FAVICON HERE -->
-  <link rel="shortcut icon" type="image/x-icon" href="//cdn.shopify.com/shopify-marketing_assets/static/shopify-favicon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="../Assets/f_favicon.png">
 
   <!--BEGIN CSS-->
-  <link rel="stylesheet" type="text/css" href="https://cdn.shopify.com/s/files/1/0384/1093/t/6/assets/timber.scss.css?14316218983674294644" media="all" />
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.shopify.com/s/files/1/0384/1093/t/6/assets/timber.scss.css?14316218983674294644" media="all" /> -->
   <link href="https://cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" type="text/css" href="./static/css/libraries/assets/owl.carousel.min.css"/>
   <link rel="stylesheet" type="text/css" href="./static/css/libraries/assets/owl.theme.default.min.css"/>
@@ -108,23 +108,25 @@
     <!-- EVENT OVERVIEW CAROUSEL -->
     <div class="card-section owl-carousel owl-theme" id="events-overview" data-bind="foreach: events">
       <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
-        <h5 data-bind="text: time"></h5>
-        <h2 data-bind="text: title"></h2>
-        <h6 data-bind="text: slogan"></h6>
+        <h5 class="event_time" data-bind="text: time"></h5>
+        <h2 class="event_title" data-bind="text: title"></h2>
+        <h6 class="event_description_short" data-bind="text: slogan"></h6>
         <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
       </div>
     </div>
 
     <div data-bind="foreach: events">
       <!-- Knockout.JS interprets the comment below -->
-      <!-- if: title != $root.activeEvent.title --> 
+      <!-- if: title != $root.activeEvent.title -->
       <div class="card-section">
-        <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
-          <h5 data-bind="text: time"></h5>
-          <h2 data-bind="text: title"></h2>
+        <div class="card-container card_midground" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
+          <h5 class="event_time" data-bind="text: time"></h5>
+          <h2 class="event_title" data-bind="text: title"></h2>
           <h2 data-bind="text: $root.activeEvent.slogan"></h2>
-          <h6 data-bind="text: slogan"></h6>
+          <h6 class="event_description_short" data-bind="text: slogan"></h6>
           <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
+          <div class="card_midground" style="background-image:url(./assets/event_sunset-sounds_midground_lg.png);"></div>
+          <div class="card_foreground" style="background-image:url(./assets/event_sunset-sounds_foreground_lg.png);"></div>
         </div>
       </div>      
       <!-- /ko -->
@@ -134,12 +136,12 @@
     <!-- EVENT DETAILS CAROUSEL -->
     <div class="card-section owl-carousel owl-theme" id="event-details" data-bind="with: $root.activeEvent">
       <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
-        <h3 data-bind="text: title"></h3>
-        <h5 data-bind="text: address"></h5>
-        <h5 data-bind="text: season"></h5>
-        <h5 data-bind="text: time"></h5>
-        <h6 data-bind="text: description"></h6>
-        <img data-bind="src: source" />
+        <h3 class="event_title" data-bind="text: title"></h3>
+        <h5 class="event_address" data-bind="text: address"></h5>
+        <h5 class="event_season" data-bind="text: season"></h5>
+        <h5 class="event_time" data-bind="text: time"></h5>
+        <h6 class="event_description" data-bind="text: description"></h6>
+        <img data-bind="src: img_background" />
         <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
       </div>
     </div>
@@ -180,7 +182,7 @@
       <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='text';fnames[4]='MMERGE4';ftypes[4]='text';fnames[5]='MMERGE5';ftypes[5]='text';fnames[6]='MMERGE6';ftypes[6]='text';fnames[7]='MMERGE7';ftypes[7]='text';fnames[8]='MMERGE8';ftypes[8]='text';fnames[9]='MMERGE9';ftypes[9]='text';fnames[10]='MMERGE10';ftypes[10]='text';fnames[11]='MMERGE11';ftypes[11]='text';fnames[12]='MMERGE12';ftypes[12]='text';fnames[13]='MMERGE13';ftypes[13]='radio';fnames[14]='MMERGE14';ftypes[14]='dropdown';fnames[15]='MMERGE15';ftypes[15]='text';fnames[16]='TEXTYUI_3';ftypes[16]='text';fnames[17]='TEXTAREAY';ftypes[17]='text';fnames[18]='CHECKBOXY';ftypes[18]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
         <!--End mc_embed_signup-->
     </div>
-    <footer>
+    <footer style="width: 100%; background-color:black;">
       <p>Come join all your friends.</p>
       <a href="mailto:contact@filibuster.nyc"></a>
       <a href="#events">Events</a>
