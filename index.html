@@ -116,7 +116,8 @@
     </div>
 
     <div data-bind="foreach: events">
-      <!-- if: title != $root.activeEvent.title -->
+      <!-- Knockout.JS interprets the comment below -->
+      <!-- if: title != $root.activeEvent.title --> 
       <div class="card-section">
         <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
           <h5 data-bind="text: time"></h5>
@@ -131,7 +132,7 @@
 
 
     <!-- EVENT DETAILS CAROUSEL -->
-<!--     <div class="card-section owl-carousel owl-theme" id="event-details" data-bind="with: $root.activeEvent">
+    <div class="card-section owl-carousel owl-theme" id="event-details" data-bind="with: $root.activeEvent">
       <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
         <h3 data-bind="text: title"></h3>
         <h5 data-bind="text: address"></h5>
@@ -141,10 +142,10 @@
         <img data-bind="src: source" />
         <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
       </div>
-    </div> -->
+    </div>
 
     <!-- EVENT TICKETS CAROUSEL -->
-<!--     <div class="card-section owl-carousel event-tickets owl-theme" id="event-tickets" data-bind="with: $root.activeEvent">
+    <div class="card-section owl-carousel event-tickets owl-theme" id="event-tickets" data-bind="with: $root.activeEvent">
       <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
         <h2 data-bind="text: title">Title</h2>
         <h5 data-bind="text: slogan">Answer the Call. Come get weird.</h5>
@@ -154,37 +155,8 @@
         <a href="#">Instagram share</a>
         <a href="#">Twitter share</a>
       </div>
-    </div> -->
+    </div>
 
-    <!-- If we want to use Spotify timber grid layout, probably just add grid and grid__item classes to card-section and card-container classes abobe -->
-
-    <!-- SECTION EVENT DETAILS HIGHLIGHT -->
-<!--     <div class="grid">
-      <div class="grid__item">
-      </div>
-    </div>
-    <!-- SECTION EVENT DETAILS IN DEPTH -->
-   <!--  <div class="grid">
-      <div class="grid__item">
-      </div>
-    </div> -->
-    <!-- SECTION EVENT ARTISTS GALLERY
-    <div class="grid">
-      <div class="grid__item">
-      </div>
-    </div>
-    SECTION EVENT PHOTO GALLERY
-    <div class="grid">
-      <div class="grid__item">
-      </div>
-    </div>
-    <!-- SECTION CALL TO ACTION
-    <div class="grid">
-      <div class="grid__item">
-      </div>
-    </div> -->
-    <!-- <div class="card-section" id="">
-    </div> -->
     <div class="card-section" id="in-touch">
       <h1>Keep up with us. We'll send you some tight stuff.</h1>
       <!-- Begin MailChimp Signup Form -->
