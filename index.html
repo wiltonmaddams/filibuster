@@ -93,19 +93,19 @@
     <div class="card-section" id="party">
       <!-- <h4 id="party-callout" style="display: none;">Party like you mean it</h4> -->
     </div>
-    <div class="card-section" id="mission">
+    <div class="card-section card-section_mini" id="mission">
       <div class="card-section_inner center-card">
         <h3 class="card-text_main">Who we are and what we're trying to do</h3>
         <p class="card-text_body">Filibuster NYC creates outdoor experiences, because the sun is the greatest disco ball ever created.</p>
         <p class="card-text_body">We don't care where you're from, what you look like, or who you love... We just care that you feel the same way.</p>
-        <div class="link_container"><a class="link_more">Read More</a></div>
+        <div class="link_container"><a class="card-link_more">Read More</a></div>
       </div>
     </div>
     
     <!-- EVENT OVERVIEW CAROUSEL -->
     <div class="card-section owl-carousel owl-theme" id="events-overview" data-bind="foreach: events">
       <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + images['background'] + '\')'}">
-        <h5 class="event_time" data-bind="text: time"></h5>
+        <h5 class="event_date" data-bind="text: date"></h5>
         <h2 class="event_title" data-bind="text: title"></h2>
         <h6 class="event_description_short" data-bind="text: slogan"></h6>
         <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
@@ -115,15 +115,20 @@
     <div data-bind="foreach: events">
       <!-- Knockout.JS interprets the comment below -->
       <!-- if: title != $root.activeEvent.title -->
-      <div class="card-section">
+      <div class="card-section event">
         <div class="card-container card_background" data-bind="style: { backgroundImage: 'url(\'' + images['background'] + '\')'}">
-          <h5 class="event_time" data-bind="text: time"></h5>
-          <h2 class="event_title" data-bind="text: title"></h2>
-          <h2 data-bind="text: $root.activeEvent.slogan"></h2>
-          <h6 class="event_description_short" data-bind="text: slogan"></h6>
-          <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
           <div class="card_midground"  data-bind="style: { backgroundImage: 'url(\'' + images['midground'] + '\')'}"></div>
           <div class="card_foreground" data-bind="style: { backgroundImage: 'url(\'' + images['foreground'] + '\')'}"></div>
+          <h5 class="event_date" data-bind="text: date"></h5>
+          <h2 class="event_title" data-bind="text: title"></h2>
+          <h2 class="event_description_short" data-bind="text: $root.activeEvent.slogan"></h2>
+          <div class="event-actions_container">
+            <h6 class="event_description_short" data-bind="text: slogan"></h6>
+            <ul class="event-actions_list">
+              <li class="event-button_tickets"><a class="event-button_link">Buy Tickets</a></li>
+              <li class="event-button_more"><!-- <a class="event-button_link">Learn More</a> --><div class="event-button_link next-section-nav" data-bind="click: $root.setActiveEvent">Learn More</div></li>
+            </ul>
+          </div>
         </div>
       </div>      
       <!-- /ko -->
@@ -136,7 +141,7 @@
         <h3 class="event_title" data-bind="text: title"></h3>
         <h5 class="event_address" data-bind="text: address"></h5>
         <h5 class="event_season" data-bind="text: season"></h5>
-        <h5 class="event_time" data-bind="text: time"></h5>
+        <h5 class="event_date" data-bind="text: date"></h5>
         <h6 class="event_description" data-bind="text: description"></h6>
         <img data-bind="src: img_background" />
         <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
@@ -156,8 +161,8 @@
       </div>
     </div> -->
 
-    <div class="card-section" id="in-touch">
-      <div class="card-section_inner center-card">
+    <div class="card-section card-section_mini" id="in-touch">
+      <div class="card-section_inner">
       <h1 class="card-text_main">Keep up with us.<br />We’ll send you some tight stuff.</h1>
       <!-- Begin MailChimp Signup Form -->
       <div id="mc_embed_signup">

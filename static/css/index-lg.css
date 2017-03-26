@@ -32,18 +32,6 @@
   background: green;
 }
 
-.next-section-nav {
-  position: absolute;
-  cursor: pointer;
-  bottom: 10px;
-  right: 50%;
-  width: 0; 
-  height: 0; 
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid red;
-}
-
 /*Events Navigation*/
 .events-nav {
   position: absolute;

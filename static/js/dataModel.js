@@ -5,6 +5,7 @@ function Event(eventData) {
 	self.slogan      = eventData.slogan;
 	self.season      = eventData.season;
 	self.address     = eventData.address;
+	self.date        = eventData.date;
 	self.time        = eventData.time;
 	self.source      = eventData.source;
 	self.images      = eventData.images;
@@ -19,9 +20,10 @@ function filiViewModel() {
 			"title": "Mating Call", 
 			"id": "mating-call",
 			"slogan": "Get wild.",
-			"season": "Spring 2017",
+			"season": "Spring",
 			"address": "173 Morgan Ave. Brooklyn, NY 11206",
-			"time": "2-8pm",
+			"date": "May 20th",
+			"time": "May 20th",
 			"images": {
 				"mobile"    : "./assets/event_mating-call_background.png",
 				"foreground": "./assets/event_mating-call_foreground_lg.png",
@@ -36,9 +38,10 @@ function filiViewModel() {
 			"title": "Sunset Sounds", 
 			"id": "sunset-sounds",
 			"slogan": "Go on a field trip.",
-			"season": "Summer 2017",
+			"season": "Summer",
 			"address": "A field",
-			"time": "2-9pm",
+			"date": "July 8th",
+			"time": "July 8th",
 			"images": {
 				"mobile"    : "./assets/event_sunset-sounds_background.png",
 				"foreground": "./assets/event_sunset-sounds_foreground_lg.png",
@@ -53,9 +56,10 @@ function filiViewModel() {
 			"title": "SQUADron", 
 			"id": "squadron",
 			"slogan": "Float on.",
-			"season": "Fall 2017",
+			"season": "Fall",
 			"address": "A river",
-			"time": "2-10pm",
+			"date": "August 19th",
+			"time": "August 19th",
 			"images": {
 				"mobile"    : "./assets/event_squadron_background.png",
 				"foreground": "./assets/event_squadron_foreground_lg.png",
@@ -70,9 +74,10 @@ function filiViewModel() {
 			"title": "FearGarden", 
 			"id": "feargarden",
 			"slogan": "Dance to death.",
-			"season": "Winter 2017",
+			"season": "Winter",
 			"address": "The Well",
-			"time": "2-11pm",
+			"date": "September 30th",
+			"time": "September 30th",
 			"images": {
 				"mobile"    : "./assets/event_feargarden_background.png",
 				"foreground": "./assets/event_feargarden_foreground_lg.png",
