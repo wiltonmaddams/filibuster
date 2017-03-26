@@ -2,6 +2,45 @@
   STYLES : LARGE BREAKPOINT 
 *****************************/
 
+
+#intro-container {
+  width: 100%;
+}
+
+#intro {
+  width: 100%;
+  background-image: url("../../assets/intro.png");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.intro-cover {
+  position: absolute;
+  background-color: black;
+  width: 30%;
+  height: 100%;
+  top: 0;
+}
+.intro-cover-right {
+  right: 0;
+}
+
+
+#theme-background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-position: center center;
+  background-size: contain;
+  background-image: url("../../assets/summer_festival.jpg");
+}
+
+
+
+
+
 #party {
   width: 100%;
   opacity: 0.5;
@@ -24,14 +63,23 @@
 }
 
 /*Card Sections*/
-
+.card-container {
+  position: relative;
+  background-repeat: no-repeat;
+  /*-webkit-mask: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))*/
+}
 .event-nav-container {
   min-height: 45px;
   width: 100%;
   display: block;
   background: green;
 }
-
+.card-section {
+  position: relative;
+  text-align: center;
+/*  margin-bottom: 5px;*/
+  z-index: 0;
+}
 .next-section-nav {
   position: absolute;
   cursor: pointer;

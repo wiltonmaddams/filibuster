@@ -24,7 +24,7 @@ function filiViewModel() {
 			"time": "2-8pm",
 			"images": {
 				"mobile"    : "./assets/event_mating-call_background.png",
-				"foreground": "./assets/event_mating-call_background_lg.png",
+				"foreground": "./assets/event_mating-call_foreground_lg.png",
 				"midground" : "./assets/event_mating-call_midground_lg.png",
 				"background": "./assets/event_mating-call_background_lg.jpg"
 			},
@@ -41,7 +41,7 @@ function filiViewModel() {
 			"time": "2-9pm",
 			"images": {
 				"mobile"    : "./assets/event_sunset-sounds_background.png",
-				"foreground": "./assets/event_sunset-sounds_background_lg.png",
+				"foreground": "./assets/event_sunset-sounds_foreground_lg.png",
 				"midground" : "./assets/event_sunset-sounds_midground_lg.png",
 				"background": "./assets/event_sunset-sounds_background_lg.png"
 			},
@@ -58,7 +58,7 @@ function filiViewModel() {
 			"time": "2-10pm",
 			"images": {
 				"mobile"    : "./assets/event_squadron_background.png",
-				"foreground": "./assets/event_squadron_background_lg.png",
+				"foreground": "./assets/event_squadron_foreground_lg.png",
 				"midground" : "./assets/event_squadron_midground_lg.png",
 				"background": "./assets/event_squadron_background_lg.jpg"
 			},
@@ -75,7 +75,7 @@ function filiViewModel() {
 			"time": "2-11pm",
 			"images": {
 				"mobile"    : "./assets/event_feargarden_background.png",
-				"foreground": "./assets/event_feargarden_background_lg.png",
+				"foreground": "./assets/event_feargarden_foreground_lg.png",
 				"midground" : "./assets/event_feargarden_midground_lg.png",
 				"background": "./assets/event_feargarden_background_lg.jpg"
 			},

@@ -21,7 +21,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: "Oswald", helvetica, arial sans-serif;
+  font-family: "Raleway", helvetica, arial sans-serif;
   font-weight: 300;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -38,32 +38,8 @@ a {
 a:hover {
   color: white;
 }
-header {
-  position: fixed;
-  width: 100%;
-  height: 72px;
-  padding: 20px 3% 0px 3%;
-  background: transparent;
-  z-index: 1;
-}
-header a  { 
-  color: white;
-  font-size: 1.4em;
-  font-weight: 900;
-  z-index: 1;
-}
-#events-icon {
-  position: fixed;
-  bottom: 10px;
-  left: 3%;
-}
-#merch-icon {
-  position: fixed;
-  bottom: 10px;
-  right: 3%;
-}
 footer {
-  font-family: "Raleway";
+  font-family: "Raleway", helvetica, arial sans-serif;
   color: white;
   background-color: black;
   width: 100%;
@@ -72,7 +48,7 @@ footer {
   text-transform: uppercase;
 }
 footer a {
-  font-family: "Raleway";
+  font-family: "Raleway", helvetica, arial sans-serif;
   color: white;
   text-transform: uppercase;
 }
@@ -85,27 +61,51 @@ ul {
   overflow: auto;
 }
 
+ul,
+ul li {
+  list-style: none;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
 /******************************/
 
 
 
 
 
-#in-touch {
-background-color: white;
+
+/* TYPOGRAPHY 
+*****************************/
+
+#home-icon,
+.nyc,
+.card-text_main {
+  font-family: "Oswald", helvetica, arial sans-serif; 
 }
 
-#mc-embedded-subscribe {
-	background-color: purple;
+#mc_embed_signup input {
+  font-family: "Raleway", helvetica, arial sans-serif;
 }
+
+.copyright,
+.card-text_body {
+  font-family: georgia, "times new roman", serif;
+}
+
+
+
+
 
 
 
 /* HEADER 
 *****************************/
 
-#home-icon {
-  font-color: white;  
+#home-icon,
+.nyc {
+  font-color: #fff; 
 }
 .nyc {
   font-weight: 900;
@@ -113,6 +113,51 @@ background-color: white;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0.75px;
 }
+
+.f-header {
+  position: fixed;
+  width: 100%;
+  height: 72px;
+  padding: 20px 3% 0px 3%;
+  background: transparent;
+  z-index: 1;
+}
+
+.f-header .nav-link a { 
+  color: white;
+  font-size: 1.4em;
+  font-weight: 900;
+  z-index: 1;
+  text-align: center;
+}
+
+.nav-link {
+  display: inline;
+  position: fixed;
+  bottom: 10px;
+  border: 1px solid #fff;
+  padding: 15px 25px;
+}
+
+.linkto_home {
+  top: 10px;
+  right: auto;
+  bottom: auto;
+  left: 0%;
+  border-color: transparent;
+}
+
+.linkto_events {
+  right: auto;
+  left: 3%;
+}
+
+.linkto_merch {
+  right: 3%;
+  left: auto;
+  border-color: transparent;
+}
+
 
 
 
@@ -132,12 +177,27 @@ background-color: white;
 *****************************/
 
 .card-container {
-	background-size: cover;
+  position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  /*-webkit-mask: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))*/
+}
+
+.card-section {
+  position: relative;
+  text-align: center;
+  z-index: 0;
+}
+
+.card-section_inner {
+  max-width: 610px;
+  margin: 0 auto;
 }
 
 .card_foreground,
 .card_midground,
-.card_midground {
+.card_background {
   position: absolute;
   top: 0;
   left: 0;
@@ -150,15 +210,171 @@ background-color: white;
 }
 
 
+/* CARDS : INTRO
+*****************************/
+
+#intro-container {
+  width: 100%;
+}
+
+#intro {
+  width: 100%;
+  background-image: url("../../assets/intro.png");
+/*  background-attachment: fixed;*/
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.intro-cover {
+  position: absolute;
+  background-color: black;
+  width: 30%;
+  height: 100%;
+  top: 0;
+}
+.intro-cover-right {
+  right: 0;
+}
+
+
+#theme-background {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-color: #000;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: contain;
+  background-image: url("../../assets/summer_festival.jpg");
+  background-repeat: no-repeat;
+}
+
+
+/* CARDS : ABOUT / MISSION
+*****************************/
+
+.card-section#mission {
+  background-image: url(../../assets/about_background_lg.jpg);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card-section#mission .card-text_main {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.card-section#mission .card-text_body {
+  font-size: 23px;
+  line-height: 35px;
+  margin-bottom: 15px;
+  text-align: left;
+}
 
 
 
 
 
+/* CARDS : SIGNUP
+*****************************/
+
+
+.card-section#in-touch .card-text_main {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.card-section#in-touch {
+  background-color: white;
+}
+
+#mc-embedded-subscribe {
+  background-color: purple;
+}
+
+#mc_embed_signup .mc-field-group {
+  width: 100%;
+}
+
+#mc_embed_signup input {
+  min-height: 60px;
+  border-radius: 0px;
+  font-size: 17px;
+}
+
+#mc_embed_signup input.f-submit {
+  color: #fff;
+  font-weight: 400;
+  line-height: 0;
+  min-height: 79px;
+  padding: 0px 20px;
+}
+
+#mc_embed_signup .f-clear-override {
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
 
 
 
 
+
+.f-footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: #000;
+}
+
+.f-footer_inner_col {
+  display: inline;
+  float: left;
+  width: 100%;
+  max-width: 33%;
+}
+
+.f-footer .card-text_main,
+.f-footer .copyright,
+.f-footer .card-text_body {
+  text-transform: none;
+}
+
+.f-footer .card-text_main {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.f-footer .copyright {
+  opacity: 0.7;
+}
+
+
+
+
+
+/* MODIFIERS
+*****************************/
+
+.center-card  {
+  padding-top: 50%;
+  -webkit-transform:translate(0,-50%);
+  -moz-transform:translate(0,-50%);
+  -o-transform:translate(0,-50%);
+  transform:translate(0,-50%);
+}
 
 
 
