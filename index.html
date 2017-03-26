@@ -107,7 +107,7 @@
     
     <!-- EVENT OVERVIEW CAROUSEL -->
     <div class="card-section owl-carousel owl-theme" id="events-overview" data-bind="foreach: events">
-      <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
+      <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + images['background'] + '\')'}">
         <h5 class="event_time" data-bind="text: time"></h5>
         <h2 class="event_title" data-bind="text: title"></h2>
         <h6 class="event_description_short" data-bind="text: slogan"></h6>
@@ -119,14 +119,14 @@
       <!-- Knockout.JS interprets the comment below -->
       <!-- if: title != $root.activeEvent.title -->
       <div class="card-section">
-        <div class="card-container card_midground" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
+        <div class="card-container card_background" data-bind="style: { backgroundImage: 'url(\'' + images['background'] + '\')'}">
           <h5 class="event_time" data-bind="text: time"></h5>
           <h2 class="event_title" data-bind="text: title"></h2>
           <h2 data-bind="text: $root.activeEvent.slogan"></h2>
           <h6 class="event_description_short" data-bind="text: slogan"></h6>
           <div class="next-section-nav" data-bind="click: $root.setActiveEvent"></div>
-          <div class="card_midground" style="background-image:url(./assets/event_sunset-sounds_midground_lg.png);"></div>
-          <div class="card_foreground" style="background-image:url(./assets/event_sunset-sounds_foreground_lg.png);"></div>
+          <div class="card_midground"  data-bind="style: { backgroundImage: 'url(\'' + images['midground'] + '\')'}"></div>
+          <div class="card_foreground" data-bind="style: { backgroundImage: 'url(\'' + images['foreground'] + '\')'}"></div>
         </div>
       </div>      
       <!-- /ko -->
@@ -135,7 +135,7 @@
 
     <!-- EVENT DETAILS CAROUSEL -->
     <div class="card-section owl-carousel owl-theme" id="event-details" data-bind="with: $root.activeEvent">
-      <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
+      <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + images['background'] + '\')'}">
         <h3 class="event_title" data-bind="text: title"></h3>
         <h5 class="event_address" data-bind="text: address"></h5>
         <h5 class="event_season" data-bind="text: season"></h5>
@@ -148,7 +148,7 @@
 
     <!-- EVENT TICKETS CAROUSEL -->
     <div class="card-section owl-carousel event-tickets owl-theme" id="event-tickets" data-bind="with: $root.activeEvent">
-      <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + source + '\')'}">
+      <div class="card-container" data-bind="style: { backgroundImage: 'url(\'' + images['background'] + '\')'}">
         <h2 data-bind="text: title">Title</h2>
         <h5 data-bind="text: slogan">Answer the Call. Come get weird.</h5>
         <img data-bind="src: source" />
