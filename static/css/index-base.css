@@ -349,6 +349,7 @@ ul li {
 
 .card-section.event .event-button_tickets {
   color: #000;
+  font-size: 20px;
   padding: 25px 35px;
   margin-bottom: 20px;
   background-color: #fff;
@@ -358,12 +359,12 @@ ul li {
 
 .card-section.event .event-button_more {
   color: #fff;
+  font-size: 15px;
   font-weight: 700;
   opacity: 0.7;
 }
 
 .card-section.event .event-button_link {
-  font-size: 20px;
   font-weight: 700;
   line-height: 0;
   text-align: center;
