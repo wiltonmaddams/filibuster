@@ -25,12 +25,11 @@ function filiViewModel() {
 			"date": "May 20th",
 			"time": "May 20th",
 			"images": {
-				"mobile"    : "./assets/event_mating-call_background.png",
+				"mobile"    : "./assets/event_mating-call_mobile_lg.jpg",
 				"foreground": "./assets/event_mating-call_foreground_lg.png",
 				"midground" : "./assets/event_mating-call_midground_lg.png",
 				"background": "./assets/event_mating-call_background_lg.jpg"
 			},
-			"source": "./assets/event_mating-call_background_lg.jpg",
 			"description": "Mating Call this is an example of a long description. Mating Call this is an example of a long description.",
 			"theme": "purple"
 		},
@@ -43,12 +42,11 @@ function filiViewModel() {
 			"date": "July 8th",
 			"time": "July 8th",
 			"images": {
-				"mobile"    : "./assets/event_sunset-sounds_background.png",
+				"mobile"    : "./assets/event_sunset-sounds_mobile_lg.jpg",
 				"foreground": "./assets/event_sunset-sounds_foreground_lg.png",
 				"midground" : "./assets/event_sunset-sounds_midground_lg.png",
 				"background": "./assets/event_sunset-sounds_background_lg.png"
 			},
-			"source": "./assets/event_sunset-sounds_background_lg.png",
 			"description": "Sunset Sounds this is an example of a long description. Sunset Sounds this is an example of a long description.",
 			"theme": "red"
 		},
@@ -61,12 +59,11 @@ function filiViewModel() {
 			"date": "August 19th",
 			"time": "August 19th",
 			"images": {
-				"mobile"    : "./assets/event_squadron_background.png",
+				"mobile"    : "./assets/event_squadron_mobile_lg.jpg",
 				"foreground": "./assets/event_squadron_foreground_lg.png",
 				"midground" : "./assets/event_squadron_midground_lg.png",
 				"background": "./assets/event_squadron_background_lg.jpg"
 			},
-			"source": "./assets/event_squadron_background_lg.jpg",
 			"description": "Current Event this is an example of a long description. Current Event this is an example of a long description.",
 			"theme": "green"
 		},
@@ -79,12 +76,11 @@ function filiViewModel() {
 			"date": "September 30th",
 			"time": "September 30th",
 			"images": {
-				"mobile"    : "./assets/event_feargarden_background.png",
+				"mobile"    : "./assets/event_feargarden_mobile_lg.jpg",
 				"foreground": "./assets/event_feargarden_foreground_lg.png",
 				"midground" : "./assets/event_feargarden_midground_lg.png",
 				"background": "./assets/event_feargarden_background_lg.jpg"
 			},
-			"source": "./assets/event_feargarden_background_lg.jpg",
 			"description": "Fear Garden this is an example of a long description. Fear Garden this is an example of a long description.",
 			"theme": "black"
 		}

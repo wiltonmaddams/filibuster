@@ -227,6 +227,7 @@ jx.define('jx.controllers.index', {
 
     // Each event card should also be at least the window height
     $(".card-container").css("min-height", $(window).height());
+    $("#events-overview .card-container").css("min-height", $(window).height() / 1.5);
   },
   onWindowResize: function(element, e) {
     this.onSnapCards();

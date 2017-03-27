@@ -21,7 +21,7 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: "Raleway", helvetica, arial sans-serif;
+  font-family: "Exo 2", helvetica, arial sans-serif;
   font-weight: 300;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -39,7 +39,7 @@ a:hover {
   color: white;
 }
 footer {
-  font-family: "Raleway", helvetica, arial sans-serif;
+  font-family: "Exo 2", helvetica, arial sans-serif;
   color: white;
   background-color: black;
   width: 100%;
@@ -48,7 +48,7 @@ footer {
 /*  text-transform: uppercase;*/
 }
 footer a {
-  font-family: "Raleway", helvetica, arial sans-serif;
+  font-family: "Exo 2", helvetica, arial sans-serif;
   color: white;
 /*  text-transform: uppercase;*/
 }
@@ -82,18 +82,16 @@ ul li {
 #home-icon,
 .nyc,
 .card-text_main {
-  font-family: "Oswald", helvetica, arial sans-serif; 
+  font-family: "Exo 2", helvetica, arial sans-serif; 
 }
 
-#mc_embed_signup input {
-  font-family: "Raleway", helvetica, arial sans-serif;
-}
 
+.menu-link,
 .copyright,
-.card-text_body {
-  font-family: georgia, "times new roman", serif;
+.card-text_body,
+#mc_embed_signup input {
+  font-family: "Exo 2", serif, helvetica, arial sans-serif;
 }
-
 
 
 
@@ -120,13 +118,13 @@ ul li {
   height: 72px;
   padding: 20px 3% 0px 3%;
   background: transparent;
-  z-index: 1;
+  z-index: 10;
 }
 
 .f-header .nav-link a { 
   color: white;
   font-size: 1.4em;
-  font-weight: 900;
+  font-weight: 400;
   z-index: 1;
   text-align: center;
 }
@@ -158,7 +156,126 @@ ul li {
   border-color: transparent;
 }
 
+/* Hamburger Nav Bar */
+#hamburger-nav {
+  float: right;
+  width: 55px;
+  height: 20px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  margin-top: 7px;
+}
 
+#hamburger-nav span {
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: none;
+  border: 1px solid white;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#hamburger-nav span:nth-child(1) {
+  top: 0px;
+}
+
+#hamburger-nav span:nth-child(2) {
+  top: 10px;
+}
+
+#hamburger-nav span:nth-child(3) {
+  top: 20px;
+}
+
+#hamburger-nav.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+
+
+/* MENU 
+*****************************/
+
+
+.menu-container {
+  position: relative;
+}
+.menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 350px;
+}
+
+.menu_inner {
+  position: absolute;
+  bottom: 10px;
+  padding: 40px;
+}
+
+.menu-item {
+  margin-bottom: 20px;
+}
+
+/*.menu-item.first {
+  margin-bottom: 0px;
+}
+*/
+.menu-item .menu-link {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+}
+
+.menu-sub-list .menu-item {
+  margin-bottom: 10px;
+}
+
+.menu-sub-list .menu-item .menu-link {
+  color: #999;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
 
 
 /* BODY 
@@ -269,7 +386,7 @@ ul li {
 .card-section#mission .card-text_main {
   font-size: 40px;
   font-weight: 700;
-  line-height: 50px;
+  line-height: 45px;
   text-align: right;
   margin-bottom: 20px;
   display: inline-block;
@@ -278,8 +395,8 @@ ul li {
 }
 
 .card-section#mission .card-text_body {
-  font-size: 23px;
-  line-height: 35px;
+  font-size: 19px;
+  line-height: 30px;
   margin-bottom: 15px;
   text-align: left;
   clear: both;
@@ -295,6 +412,9 @@ ul li {
   text-align: left;
 }
 
+
+
+
 /* EVENTS OVERVIEW 
 *****************************/
 
@@ -302,14 +422,90 @@ ul li {
   width: 100%;
 }
 
+#events-overview {
+  background-color: #000;
+  padding: 100px 10px;
+}
+
+#events-overview .owl-item {
+  padding: 0px 5px;
+}
+
+/*#events-overview .owl-item .card-container {
+  border: 1px solid rgba(255,255,255,0.25);
+}*/
+
+#events-overview .event_date {
+  padding-top: 40px;
+}
+
+#events-overview .event-actions_container {
+  position: absolute;
+  bottom: 10px;
+  max-width: 200px;
+  margin-left: 50%;
+  overflow: visible;
+  max-height: 100px;
+  height: 100%;
+  -webkit-transform:translate(-50%,0);
+  -moz-transform:translate(-50%,0);
+  -o-transform:translate(-50%,0);
+  transform:translate(-50%,0);
+}
+
+#events-overview .event-button_tickets {
+  color: #fff;
+  font-size: 15px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  margin-bottom: 20px;
+  padding: 15px 25px;
+}
+
+#events-overview .event-button_more {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+#events-overview .event-button_link {
+  font-weight: 700;
+  line-height: 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*.event-button_link.season-pass {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform:translate(-50%,0);
+  -moz-transform:translate(-50%,0);
+  -o-transform:translate(-50%,0);
+  transform:translate(-50%,0);
+}*/
+
+
+/* EVENTS OVERVIEW 
+*****************************/
+
+#merch {
+  background-color: #fff;
+}
+
+
+
+
 
 /* CARDS : EVENTS : INTRO 
 *****************************/
 
-.card-section.event .event_date, 
-.card-section.event .event_time, 
-.card-section.event .event_title, 
-.card-section.event .event_description_short {
+.card-section .event_date, 
+.card-section .event_time, 
+.card-section .event_title, 
+.card-section .event_description_short {
   color: #fff;
 }
 
@@ -319,17 +515,13 @@ ul li {
 }
 
 .card-section.event .event_date {
-  text-transform: uppercase;
-  letter-spacing: 1px;
+/*  text-transform: uppercase;
+  letter-spacing: 1px;*/
   padding-top: 40px;
 }
 
-.event_title {
-  opacity: 0;
-  text-indent: -9999px;
-}
-
 .card-section.event .event_description_short {
+  display: none;
   margin-bottom: 50px;
 }
 
@@ -373,10 +565,25 @@ ul li {
 }
 
 
+/* CARD : EVENT DETAILS
+*****************************/
+
+#event-details {
+  background-color: #fff;
+}
+
+#event-details .card-container {
+  padding-top: 20%;
+}
+
+#event-details .card-section_inner {
+  border: 1px solid #000;
+  padding: 20px;
+}
 
 
 
-/* CARDS : SIGNUP
+/* CARD : SIGNUP
 *****************************/
 
 
@@ -391,7 +598,7 @@ ul li {
 .card-section#in-touch .card-text_main {
   font-size: 40px;
   font-weight: 700;
-  line-height: 50px;
+  line-height: 45px;
   margin-bottom: 20px;
   text-align: right;
 }
@@ -426,7 +633,8 @@ ul li {
 
 
 
-
+/* FOOTERS 
+*****************************/
 
 .f-footer {
   position: absolute;
@@ -435,6 +643,7 @@ ul li {
   width: 100%;
   background-color: #000;
   padding-bottom: 100px;
+  z-index: 11;
 }
 
 .f-footer_inner_col {
@@ -484,12 +693,19 @@ ul li {
   transform:translate(0,-50%);
 }
 
+.hide {
+  display: none;
+}
 
 .card-section_mini {
   max-height: 700px !important;
 }
 
-
+.hide-text {
+  opacity: 0;
+  height: 0;
+  text-indent: -9999px;
+}
 
 
 
