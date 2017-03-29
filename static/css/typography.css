@@ -1,0 +1,216 @@
+/**********************
+  STYLES : TYPOGRAPHY 
+***********************/
+
+
+h1, h2, h3, h4, h5, h6, p {
+font-feature-settings: "kern";
+-webkit-font-feature-settings: "kern";
+-moz-font-feature-settings: "kern";
+-moz-font-feature-settings: "kern=1";
+
+font-smoothing: antialiased;
+-webkit-font-smoothing: antialiased;
+-moz-font-smoothing: antialiased;
+
+text-rendering: optimizeLegibility;
+font-size: 100%;
+font-size: 16px;
+}
+
+
+/* Typefaces 
+**********************/
+
+/* Lalezar: 1 style 
+   PT Sans: 400, 700 */
+
+.section-header.super,
+.section-header.primary,
+.title.primary,
+.title.secondary {
+  font-family: "Lalezar", "PT Sans", arial, helvetica, sans-serif;
+}
+
+.description_short,
+.event_date,
+.nav-link,
+.nav-link a,
+.action_container a,
+.kicker,
+.section-header.secondary,
+.text_prompt.secondary,
+.footer-list.links .footer-item,
+.footer-list.links .footer-item a,
+.menu-list.primary .menu-item a,
+.menu-list.secondary .menu-item a,
+.section.prompt_share .section-share .share-item a span {
+  font-family: "PT Sans", arial, helvetica, sans-serif;
+}
+
+.info,
+.title.secondary.alt,
+.title.tertiary,
+.menu-list.info .menu-item,
+.footer-list.info .footer-item,
+.contact,
+.contact a,
+.menu-list.secondary .menu-item a.contact,
+.copyright,
+.text.primary,
+.text.primary strong {
+  font-family: "Constantia", "Lucidabright", "Lucida Serif", Lucida, georgia, "Times New Roman", serif; 
+}
+
+
+/* Typography 
+**********************/
+
+
+.contact,
+.contact a,
+.menu-list.secondary .menu-item a.contact,
+.copyright {
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.nav-link,
+.nav-link a {
+  font-size: 17px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.menu-list.primary .menu-item {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.menu-list.secondary .menu-item {
+  font-size: 23px;
+  line-height: 40px;
+}
+
+.menu-list.secondary.info {
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.section-header.primary {
+  font-size: 27px;
+  line-height: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.section-header.secondary {
+  font-size: 17px;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.event_date {
+  font-size: 17px;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.event_overview .event_date {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: none;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.title.secondary {
+  font-size: 44px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.event_overview .title.secondary {
+  text-align: left;
+}
+
+.title.secondary.alt {
+  font-weight: 700;
+}
+
+
+.action_link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.description_short {
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+
+.section-header.super {
+  font-size: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.section-header.super.alt {
+  text-transform: uppercase;
+}
+
+.section-header.primary.alt {
+  text-align: left;
+  text-transform: none;
+}
+
+.text.primary {
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.text.primary strong {
+  font-weight: 700;
+}
+
+.kicker {
+  font-size: 15px;
+  line-height: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.title.tertiary {
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.footer-list.links .footer-item,
+.footer-list.links .footer-item a {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+
+.footer .text_prompt {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+
+
