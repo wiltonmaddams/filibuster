@@ -869,6 +869,13 @@ figure.sixteen-nine-img img {
     -webkit-text-stroke-color: #000 !important;
   }*/
 
+  #home-icon {
+    display: inline-block;
+    width: 120px !important;
+    height: 51px !important;
+    background-image: url(../../assets/f_stack_horizontal_white.png) !important;
+  }
+
   .linkto_menu {
     top: 10px !important;
   }
