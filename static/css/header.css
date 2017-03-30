@@ -245,6 +245,8 @@
 .menu,
 .menu_inner {
   -webkit-transition: width .2s ease-in-out,padding .35s;
+  -moz-transition: width .2s ease-in-out, padding .35s;
+  -o-transition: width .2s ease-in-out, padding .35s;
   transition: width .2s ease-in-out, padding .35s;
 }
 

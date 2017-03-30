@@ -39,6 +39,9 @@ body {
 
 .main {
   position: relative;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out;
 }
 
@@ -332,12 +335,21 @@ body {
   text-align: left;
   margin: 0;
   opacity: 0;
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -o-transform: translateY(20px);
   transform: translateY(20px);
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
 .section.event_overview .content_item:hover .action_container.secondary {
   opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -o-transform: translateY(0px);
   transform: translateY(0px);
 }
 
@@ -492,7 +504,13 @@ input {
   padding: 20px;
   text-align: center;
   opacity: 0;
+  -webkit-transform: translate(-50%, 20px);
+  -moz-transform: translate(-50%, 20px);
+  -o-transform: translate(-50%, 20px);
   transform: translate(-50%, 20px);
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -504,6 +522,9 @@ input {
 
 .section.events_list .content_item:hover .action_container.secondary {
   opacity: 1;
+  -webkit-transform: translate(-50%, 0px);
+  -moz-transform: translate(-50%, 0px);
+  -o-transform: translate(-50%, 0px);
   transform: translate(-50%, 0px);
 }
 
@@ -777,17 +798,29 @@ div + .vertical-line {
 *****************************/
 
 .content_list,
-.fx { transition: all .2s ease-in-out; z-index: 1; }
+.fx { 
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  z-index: 1; 
+}
 
 .content_list:hover .fx { opacity: 0.7; }
 .content_list:hover .event-details { opacity: 0.2; }
 
 .fx .gradient-overlay {
   opacity: 0;
+  -webkit-transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -o-transition: opacity .2s ease-in-out;
   transition: opacity .2s ease-in-out;
 }
 
 .content_list:hover .fx:hover {
+  -webkit-transform: scale(1.02); 
+  -moz-transform: scale(1.02); 
+  -o-transform: scale(1.02); 
   transform: scale(1.02); 
   opacity: 1;
   z-index: 2;
@@ -801,6 +834,7 @@ div + .vertical-line {
 .events_past .content_list:hover .fx:hover {  
   -webkit-box-shadow: 0px 4px 24px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 4px 24px 0px rgba(0,0,0,0.75);
+  -o-box-shadow: 0px 4px 24px 0px rgba(0,0,0,0.75);
   box-shadow: 0px 4px 24px 0px rgba(0,0,0,0.75);
 }
 
@@ -856,6 +890,9 @@ figure.sixteen-nine-img img {
   top: 50%;
   left: 50%;
   width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -961,6 +998,9 @@ figure.sixteen-nine-img img {
 
   .section.event_overview .action_container.secondary {
     opacity: 0;
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -o-transform: translateY(0px);
     transform: translateY(0px);
     width: calc(100% - 26px);
     border: 0;
@@ -1072,6 +1112,9 @@ figure.sixteen-nine-img img {
 
   .section.events_list .action_container {
     opacity: 0.4;
+    -webkit-transform: translate(-50%,0px);
+    -moz-transform: translate(-50%,0px);
+    -o-transform: translate(-50%,0px);
     transform: translate(-50%,0px);
   }
 
