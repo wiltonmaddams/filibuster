@@ -106,11 +106,11 @@
     <!--  MAIN  -->
     <div class="main">
       <div class="section header-background"></div>
-      <div class="header-overlay bg-image" data-img-type="background" data-img-src="site_intro" style="background-image:url(./assets/site_cover_horizontal_large.png);"></div>
+      <div class="header-overlay bg-image" data-img-extensions='["horizontal_small"]' data-img-src="site_intro" style="background-image:url(./assets/site_cover_horizontal_large.png);"></div>
       <div class="overlay-cover right"></div>
       <div class="overlay-cover left"></div>
       <!-- Section : Intro  -->
-      <div class="section intro bg-image" data-img-type="background" data-img-src="site_intro" style="background-image:url(./assets/site_intro_horizontal_large_fx2.jpg);">
+      <div class="section intro bg-image" data-img-extensions='["horizontal_small"]' data-img-src="site_intro" style="background-image:url(./assets/site_intro_horizontal_large_fx2.jpg);">
         <div class="section_inner mod_center-content">
           <div class="star"><img class="icon_star white" src="./assets/star_white.svg" /></div>
           <div class="vertical-line"></div>
@@ -123,7 +123,7 @@
       </div>
 
       <!-- Section : Current Event  -->
-      <div class="section event_current bg-image" data-img-type="background" data-img-src="event_squadron" style="background-image:url(./assets/event_squadron_horizontal_large_fx.jpg);">
+      <div class="section event_current bg-image" data-img-extensions='["horizontal_large_fx", "horizontal_small_fx", "vertical_fx"]' data-img-src="event_squadron" style="background-image:url(./assets/event_squadron_horizontal_large_fx.jpg);">
         <div class="section_inner">
           <h3 class="section-header primary half-rule">Upcoming Event</h3>
           <div class="content_container">
@@ -262,7 +262,7 @@
       </div>
 
       <!-- Section : Email Signup  -->
-      <div class="section signup bg-image" data-img-type="background" data-img-src="site_signup" style="background-image:url(./assets/site_signup_horizontal_large_fx.jpg);">
+      <div class="section signup bg-image" data-img-extensions='["horizontal_large_fx", "vertical_fx"]' data-img-src="site_signup" style="background-image:url(./assets/site_signup_horizontal_large_fx.jpg);">
         <div class="section_inner">
           <div class="star"><img class="icon_star white" src="./assets/star_white.svg" /></div>
           <div class="vertical-line"></div>
@@ -286,7 +286,7 @@
           <h3 class="section-header primary half-rule">The Events</h3>
           <div class="content_container">
             <ul class="content_list">
-              <li class="content_item event first fx">
+              <li class="content_item event first fx bg-image" data-img-extensions='["horizontal_small", "vertical"]' data-img-src="event_mating-call">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details mod_center-content">
@@ -296,7 +296,7 @@
                 <div class="action_container secondary"><span class="action_link">Learn More</span></div>
                 </a>
               </li>
-              <li class="content_item event fx bg-image" data-img-src="event_sunset-sounds" style="background-image:url(./assets/event_sunset-sounds_horizontal_small.jpg);">
+              <li class="content_item event fx bg-image" data-img-extensions='["horizontal_small", "vertical"]' data-img-src="event_sunset-sounds" style="background-image:url(./assets/event_sunset-sounds_horizontal_small.jpg);">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details mod_center-content">
@@ -306,7 +306,7 @@
                 <div class="action_container secondary"><span class="action_link">Learn More</span></div>
                 </a>
               </li>
-              <li class="content_item event fx bg-image" data-img-src="event_squadron" style="background-image:url(./assets/event_squadron_horizontal_small.jpg);">
+              <li class="content_item event fx bg-image" data-img-extensions='["horizontal_small", "vertical"]' data-img-src="event_squadron" style="background-image:url(./assets/event_squadron_horizontal_small.jpg);">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details mod_center-content">
@@ -316,7 +316,7 @@
                 <div class="action_container secondary"><span class="action_link">Learn More</span></div>
                 </a>
               </li>
-              <li class="content_item event fx bg-image" data-img-src="event_feargarden" style="background-image:url(./assets/event_feargarden_horizontal_small.jpg);">
+              <li class="content_item event fx bg-image" data-img-extensions='["horizontal_small", "vertical"]' data-img-src="event_feargarden" style="background-image:url(./assets/event_feargarden_horizontal_small.jpg);">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details mod_center-content">
@@ -332,14 +332,14 @@
       </div>
 
       <!-- Section : Past Events  -->
-      <div class="section events_past bg-image" data-img-type="background" data-img-src="site_past-events" style="background-image:url(./assets/site_past-events_horizontal_large_fx.jpg);">
+      <div class="section events_past bg-image" data-img-extensions='["horizontal_large_fx", "vertical_fx"]' data-img-src="site_past-events" style="background-image:url(./assets/site_past-events_horizontal_large_fx.jpg);">
         <div class="section_inner">
           <h3 class="section-header super">Past Events</h3>
           <p class="description_short">Check out photos of the events we’ve done.</p>
           <div class="content_container">
             <h4 class="title secondary"></h4>
             <ul class="content_list">
-              <li class="content_item past-event_item fx bg-image" data-img-type="vertical-only" data-img-src="event_2016_feargarden" style="background-image:url(./assets/event_2016_feargarden_vertical.jpg);">
+              <li class="content_item past-event_item fx bg-image" data-img-extensions='["vertical"]' data-img-src="event_2016_feargarden" style="background-image:url(./assets/event_2016_feargarden_vertical.jpg);">
                 <div class="gradient-overlay"></div>
                 <div class="icon_new-window"></div>
                 <div class="past-event">
@@ -351,7 +351,7 @@
                   </a>
                 </div>
               </li>
-              <li class="content_item past-event_item fx bg-image" data-img-type="vertical-only" data-img-src="event_2016_sunset-sounds" style="background-image:url(./assets/event_2016_sunset-sounds_vertical.jpg);">
+              <li class="content_item past-event_item fx bg-image" data-img-extensions='["vertical"]' data-img-src="event_2016_sunset-sounds" style="background-image:url(./assets/event_2016_sunset-sounds_vertical.jpg);">
                 <div class="gradient-overlay"></div>
                 <div class="icon_new-window"></div>
                 <div class="past-event">
@@ -363,7 +363,7 @@
                   </a>
                 </div>
               </li>
-              <li class="content_item past-event_item fx bg-image" data-img-type="vertical-only" data-img-src="event_2016_filibus" style="background-image:url(./assets/event_2016_filibus_vertical.jpg);">
+              <li class="content_item past-event_item fx bg-image" data-img-extensions='["vertical"]' data-img-src="event_2016_filibus" style="background-image:url(./assets/event_2016_filibus_vertical.jpg);">
                 <div class="gradient-overlay"></div>
                 <div class="icon_new-window"></div>
                 <div class="past-event">
@@ -465,6 +465,11 @@
       function checkScreenSize() {
         // console.log("casual resize check");
         // hasClass(body, cls, spltCheck);
+
+        // TO-DO: 
+        // This should check the screen size of the window for one of the 3 sizes,
+        // Then it should cycle through the bg-image elements and check their data-img-extension array
+        // If there's more than one in that array, it should swap out the img ext for the next one down
       };
 
       window.addEventListener('resize', function(event){
