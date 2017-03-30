@@ -256,13 +256,13 @@ body {
 
 
 .section.event_overview {
-  background-color: #fff;
+/*  background-color: #fff;*/
   padding-bottom: 40px;
 }
 
-.section.event_overview .section-header {
+/*.section.event_overview .section-header {
   color: #333;
-}
+}*/
 
 .section.event_overview .section_inner {
   max-width: 1280px;
@@ -299,7 +299,7 @@ body {
 }
 
 .section.event_overview .action_container {
-  border: 1px solid #333;
+  border: 1px solid #fff;
   margin: 0 auto;
   padding: 15px 20px;
   text-align: center;
@@ -308,7 +308,7 @@ body {
 }
 
 .section.event_overview .action_container a {
-  color: #333;
+  color: #fff;
   font-weight: 700;
 }
 
