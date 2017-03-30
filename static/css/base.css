@@ -60,7 +60,7 @@ body {
   overflow: hidden;
 }
 
-.section.bg-image {
+.bg-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -972,6 +972,12 @@ figure.sixteen-nine-img img {
     max-width: calc(100% - 10px);
   }
 
+  .content_item .action_link {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 25px;
+  }
+
   .section.merchandise .section_inner {
     padding-top: 2vh;
   }
@@ -1051,6 +1057,8 @@ figure.sixteen-nine-img img {
   }
 
   .section.events_list .event_date {
+    font-size: 14px;
+    line-height: 20px;
     padding-bottom: 5px;
   }
 

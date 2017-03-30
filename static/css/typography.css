@@ -37,6 +37,7 @@ font-size: 16px;
 .nav-link,
 .nav-link a,
 .action_container a,
+.action_link,
 .kicker,
 .section-header.secondary,
 .text_prompt.secondary,
@@ -151,6 +152,10 @@ font-size: 16px;
   font-size: 20px;
   font-weight: 700;
   line-height: 25px;
+}
+
+.content_item .action_link {
+  font-size: 17px;
 }
 
 .description_short {
