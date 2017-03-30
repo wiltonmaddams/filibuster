@@ -448,10 +448,9 @@
       var resizeTimer,
           body = document.body,
           screenClasses = [
-            "screen-size_desktop_big", 
-            "screen-size_desktop", 
-            "screen-size_tablet", 
-            "screen-size_mobile"
+            "screen-size_desktop_big", // over 1200
+            "screen-size_desktop", // 800 or higher
+            "screen-size_mobile" // under 800
           ];
 
       function checkScreenSize() {
