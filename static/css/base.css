@@ -539,6 +539,10 @@ input {
   z-index: 2;
 }
 
+.section.events_past .content_list .fx {
+  opacity: 0.7;
+}
+
 .section.events_past .content_item {
   background-color: #666;
   margin:10px 0 10px 2%;
