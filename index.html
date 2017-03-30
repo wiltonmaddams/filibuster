@@ -417,29 +417,28 @@
   </div>
   <!--  /BODY : INNER  -->
   <script type="text/javascript">
+    // GET STARTED: 
     init();
 
     function init(){
-      console.log("lets begin");
       setEvents();
       function setEvents(){
         setMenuToggle();
       };
     };
 
-
     function setMenuToggle(){
       var menuButton = document.getElementById("js_menu");
-      console.log("setting menu event");
+      
       menuButton.addEventListener("click", toggleMenu);
     };
 
     function toggleMenu(){
-      var body = document.body;
-      var classNameList = ["menu_closed", "menu_open"];
+      var body = document.body,
+          classNameList = ["menu_closed", "menu_open"];
+
       classNameList = ( hasClass(body, classNameList[1]) ) ? classNameList.reverse() : classNameList;
 
-      console.log("toggling menu attr from " + classNameList[0] + " to " + classNameList[1]);
       replaceClass(body, classNameList);
     };
 
