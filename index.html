@@ -26,7 +26,6 @@
   <link rel="shortcut icon" type="image/x-icon" href="./assets/f_favicon.png">
 
   <!--BEGIN CSS-->
-  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.shopify.com/s/files/1/0384/1093/t/6/assets/timber.scss.css?14316218983674294644" media="all" /> -->
 
   <!-- CUSTOM CSS -->
   <link rel="stylesheet" type="text/css" href="./static/css/reset.css" />
@@ -39,9 +38,18 @@
   <!--BEGIN JAVASCRIPT-->
 
   <!-- EXTERNAL LIBRARIES -->
+
+  <!-- JQUERY -->
+  <script type="text/javascript"
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
   <!-- END EXTERNAL LIBRARIES -->
 
   <!-- INTERNAL LIBRARIES -->
+  <script type="text/javascript" src="./static/js/jx.js"></script>
+  <script type="text/javascript" src="./static/js/jx.ajax.js"></script>
   <!-- END INTERNAL LIBRARIES -->
 
   <!--END JAVASCRIPT-->
@@ -56,44 +64,44 @@
     <!--  HEADER  -->
     <header class="header">
       <div class="header_inner">
-          <ul class="nav-link_container">
-            <li class="nav-link linkto_home"><a id="home-icon" class="mod_hide-text" href="#">FILIBUSTER <span class="nyc">NYC</span></a></li>
-            <!-- Hamburger Navigation-->
-            <li class="nav-link linkto_menu">
-              <div id="hamburger-nav">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-            </li>
-            <li class="nav-link linkto_merch"><a id="merch-icon" href="#merch">Merchandise</a></li>
-            <li class="nav-link linkto_events"><a id="events-icon" href="#events">Events</a></li>
-            <div class="menu menu-container mod_hide">
-              <div class="menu_inner">
-                <ul class="menu-list primary">
-                  <li class="menu-item first"><a class="menu-link" href="#">Events</a></li>
-                  <li class="menu-item">
-                    <ul class="menu-list secondary">
-                      <li class="menu-item"><a class="menu-link" href="#">Mating Call</a></li>
-                      <li class="menu-item"><a class="menu-link" href="#">Sunset Sounds</a></li>
-                      <li class="menu-item"><a class="menu-link" href="#">SQUADron</a></li>
-                      <li class="menu-item"><a class="menu-link" href="#">FearGarden</a></li>
-                    </ul>
-                  </li>
-                  <li class="menu-item"><a class="menu-link" href="#merch">Merchandise</a></li>
-                  <li class="menu-item"><a class="menu-link" href="#about">About</a></li>
-                </ul>
-                <ul class="menu-list secondary info">
-                  <li class="menu-item"><a class="contact" href="mailto:contact@filibuster.nyc">Contact@Filibuster.nyc</a></li>
-                  <li class="menu-item"><span class="copyright">&copy; 2017 Filibuster NYC</span></li>
-                </ul>
-                <ul class="menu-list secondary share">
-                  <li class="menu-item"><a class="share-link icon_facebook small mod_hide-text" href="#">Facebook</a></li>
-                  <li class="menu-item"><a class="share-link icon_instagram small mod_hide-text" href="#">Instagram</a></li>
-                  <li class="menu-item"><a class="share-link icon_twitter small mod_hide-text" href="#">Twitter</a></li>
-                </ul>
-              </div>
+        <ul class="nav-link_container">
+          <li class="nav-link linkto_home"><a id="home-icon" class="mod_hide-text" href="#">FILIBUSTER <span class="nyc">NYC</span></a></li>
+          <!-- Hamburger Navigation-->
+          <li class="nav-link linkto_menu">
+            <div id="hamburger-nav">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
+          </li>
+          <li class="nav-link linkto_merch"><a id="merch-icon" href="#merch">Merchandise</a></li>
+          <li class="nav-link linkto_events"><a id="events-icon" href="#events">Events</a></li>
+          <div class="menu menu-container mod_hide">
+            <div class="menu_inner">
+              <ul class="menu-list primary">
+                <li class="menu-item first"><a class="menu-link" href="#">Events</a></li>
+                <li class="menu-item">
+                  <ul class="menu-list secondary">
+                    <li class="menu-item"><a class="menu-link" href="#">Mating Call</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">Sunset Sounds</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">SQUADron</a></li>
+                    <li class="menu-item"><a class="menu-link" href="#">FearGarden</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a class="menu-link" href="#merch">Merchandise</a></li>
+                <li class="menu-item"><a class="menu-link" href="#about">About</a></li>
+              </ul>
+              <ul class="menu-list secondary info">
+                <li class="menu-item"><a class="contact" href="mailto:contact@filibuster.nyc">Contact@Filibuster.nyc</a></li>
+                <li class="menu-item"><span class="copyright">&copy; 2017 Filibuster NYC</span></li>
+              </ul>
+              <ul class="menu-list secondary share">
+                <li class="menu-item"><a class="share-link icon_facebook small mod_hide-text" href="#">Facebook</a></li>
+                <li class="menu-item"><a class="share-link icon_instagram small mod_hide-text" href="#">Instagram</a></li>
+                <li class="menu-item"><a class="share-link icon_twitter small mod_hide-text" href="#">Twitter</a></li>
+              </ul>
+            </div>
+          </div>
         </ul>
       </div>
     </header>
@@ -101,11 +109,19 @@
 
     <!--  MAIN  -->
     <div class="main">
-      <div class="section header-background"></div>
+      <div class="video-wrap">
+        <video playsinline autoplay muted loop poster="../../Assets/czech_summer_festival.jpg" id="bg-vid">
+          <source src="../../Assets/ambient.mp4" type="video/mp4">
+        </video>
+      </div>
+      
+      <!-- <div class="section header-background"></div> --> 
       <div class="header-overlay"></div>
       <div class="overlay-cover right"></div>
       <div class="overlay-cover left"></div>
+
       <!-- Section : Intro  -->
+      <div class="spacer"></div>
       <div class="section intro">
         <div class="section_inner mod_center-content">
           <div class="star"><img class="icon_star white" src="./assets/star_white.svg" /></div>
@@ -450,6 +466,9 @@
       </div>
     </footer>
     <!--  /FOOTER  -->
+
+    <!-- END BODY SCRIPTS -->
+    <script type="text/javascript" src="./static/js/jx.controllers.index.js"></script>
   </div>
   <!--  /BODY : INNER  -->
 </body>
