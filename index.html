@@ -423,6 +423,7 @@
     function init(){
       setEvents();
       function setEvents(){
+        setResize();
         setMenuToggle();
       };
     };
@@ -443,6 +444,28 @@
     };
 
 
+    function setResize(){
+      var resizeTimer,
+          body = document.body,
+          screenClasses = [
+            "screen-size_desktop_big", 
+            "screen-size_desktop", 
+            "screen-size_tablet", 
+            "screen-size_mobile"
+          ];
+
+      function checkScreenSize() {
+        // console.log("casual resize check");
+        // hasClass(body, cls, spltCheck);
+      };
+
+      window.addEventListener('resize', function(event){
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(checkScreenSize, 250);
+      });
+    };
+
+
     // -----------------------------
     // HELPER FUNCTIONS: 
 
@@ -451,8 +474,14 @@
        el.className = el.className.replace(reg, " " + clsList[1]).trim();
     };
 
-    function hasClass(element, cls) {
-      return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    function hasClass(element, cls, spltCheck) {
+      var spltCheck = spltCheck || false;
+      var elClass = element.className;
+      if (!spltCheck) {
+        return (' ' + elClass + ' ').indexOf(' ' + cls + ' ') > -1;
+      } else {
+        return (""+elClass).split(" ").indexOf(cls) >= 0;
+      }
     };
   </script>
 </body>

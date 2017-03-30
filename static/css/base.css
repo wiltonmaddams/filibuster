@@ -867,6 +867,14 @@ figure.sixteen-nine-img img {
 *****************************/
 
 
+/* BREAK : SHALLOW VIEWPORTS */
+@media only screen and (min-width : 1500px) {
+    .overlay-cover {
+      width: 40% !important;
+    }
+}
+
+
 /* BREAK : TABLET */
 @media only screen and (max-width : 1000px) {
   .title.secondary {
