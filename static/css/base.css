@@ -39,8 +39,13 @@ body {
 
 .main {
   position: relative;
+  transition: opacity .2s ease-in-out;
 }
 
+.menu_open .main {
+  opacity: 0.4;
+  pointer-events: none;
+}
 
 .copyright {
   opacity: 0.7;
@@ -619,6 +624,11 @@ input {
   z-index: 11;
 }
 
+.menu_open .footer {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .footer-item,
 .footer .text_prompt {
   text-align: center;
@@ -857,7 +867,7 @@ figure.sixteen-nine-img img {
 *****************************/
 
 
-/* BREAK : MOBILE  */
+/* BREAK : TABLET */
 @media only screen and (max-width : 1000px) {
   .title.secondary {
     font-size: 40px;
@@ -865,20 +875,8 @@ figure.sixteen-nine-img img {
   }
 }
 
-
-
-
-/* BREAK : MOBILE  */
+/* BREAK : MOBILE */
 @media only screen and (max-width : 800px) { 
-
-/*  #home-icon,
-  .nyc {
-    color: #000 !important;
-  }
-
-  .nyc {
-    -webkit-text-stroke-color: #000 !important;
-  }*/
 
   #home-icon {
     display: inline-block;
@@ -891,13 +889,13 @@ figure.sixteen-nine-img img {
     top: 10px !important;
   }
 
-/*  #hamburger-nav span {
-    border: 2px solid #000 !important;
-  }*/
-
   .linkto_events,
   .linkto_merch {
     display: none !important;
+  }
+
+  .menu {
+    max-width: 100% !important;
   }
 
   .section.header-background {
@@ -915,6 +913,7 @@ figure.sixteen-nine-img img {
     width: 40% !important;
     height: 30vh !important;
   }
+
   .section.intro {
     display: none;
   }
@@ -1142,13 +1141,38 @@ figure.sixteen-nine-img img {
     font-size: 20px;
     line-height: 20px;
   }
-  
-
 
 }
 
 
 
+/* BREAK : MOBILE : MINI */
+@media only screen and (max-width : 400px) { 
+  .menu_open .linkto_home, 
+  .menu_open .linkto_events, 
+  .menu_open .linkto_merch {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+
+
+/* BREAK : SHALLOW VIEWPORTS */
+@media screen and ( max-height: 600px ){
+    .overlay-cover {
+      width: 40% !important;
+    }
+}
+
+
+
+/* BREAK : SHALLOW VIEWPORTS : MINI */
+@media screen and ( max-height: 500px ){
+    .menu-item .menu-list.secondary {
+      display: none !important;
+    }
+}
 
 
 

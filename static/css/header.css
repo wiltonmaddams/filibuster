@@ -34,6 +34,10 @@
   z-index: 10;
 }
 
+.menu_open .header {
+  z-index: 12;
+}
+
 .header-background {
 /*  position: absolute;
   top: 0;
@@ -115,6 +119,26 @@
   z-index: 10;
 }
 
+.linkto_home, 
+.linkto_events, 
+.linkto_merch {
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.menu_open .linkto_home, 
+.menu_open .linkto_events, 
+.menu_open .linkto_merch {
+  opacity: 1;
+}
+
+.menu_open .linkto_merch {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .linkto_menu {
   top: 20px;
   right: 3%;
@@ -172,21 +196,32 @@
   top: 20px;
 }
 
-#hamburger-nav.open span:nth-child(1) {
-  top: 18px;
+.menu_open #hamburger-nav {
+  height: 40px;
+}
+
+.menu_open #hamburger-nav span:nth-child(1) {
+  top: 12px;
+  background-color: #333;
+  border-color: #333;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
 }
 
-#nav-icon1.open span:nth-child(2) {
+.menu_open #hamburger-nav span:nth-child(2) {
   opacity: 0;
-  left: -60px;
+  -webkit-transform: scale(0.3); 
+  -moz-transform: scale(0.3);
+  -o-transform: scale(0.3);
+  transform: scale(0.3);
 }
 
-#nav-icon1.open span:nth-child(3) {
-  top: 18px;
+.menu_open #hamburger-nav span:nth-child(3) {
+  top: 12px;
+  background-color: #333;
+  border-color: #333;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
@@ -207,21 +242,35 @@
   z-index: 9;
 }
 
+.menu,
+.menu_inner {
+  -webkit-transition: width .2s ease-in-out,padding .35s;
+  transition: width .2s ease-in-out, padding .35s;
+}
+
 .menu {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   background-color: #fff;
   height: 100%;
   min-height: 100vh;
-  width: 100%;
+  width: 0;
   max-width: 350px;
+}
+
+.menu_open .menu {
+  width: 100%;
 }
 
 .menu_inner {
   position: absolute;
   bottom: 10px;
-  padding: 40px;
+  padding: 40px 40px 40px 0px;
+}
+
+.menu_open .menu_inner {
+  padding-left: 40px;
 }
 
 .menu-item {
@@ -288,7 +337,6 @@
   text-transform: uppercase;
 }*/
 
-
-
-
+/* BREAK : MOBILE  */
+@media only screen and (max-width : 800px) {  }
 

@@ -50,7 +50,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lalezar|PT+Sans:400,700" rel="stylesheet">
   <!-- END WEB FONTS -->
 </head>
-<body>
+<body class="screen_mobile menu_closed">
   <!--  BODY : INNER  -->
   <div class="body_inner">
     <!--  HEADER  -->
@@ -59,7 +59,7 @@
           <ul class="nav-link_container">
             <li class="nav-link linkto_home"><a id="home-icon" class="mod_hide-text" href="#">FILIBUSTER <span class="nyc">NYC</span></a></li>
             <!-- Hamburger Navigation-->
-            <li class="nav-link linkto_menu">
+            <li id="js_menu" class="nav-link linkto_menu">
               <div id="hamburger-nav">
                 <span></span>
                 <span></span>
@@ -68,7 +68,7 @@
             </li>
             <li class="nav-link linkto_merch"><a id="merch-icon" href="#merch">Merchandise</a></li>
             <li class="nav-link linkto_events"><a id="events-icon" href="#events">Events</a></li>
-            <div class="menu menu-container mod_hide">
+            <div class="menu menu-container">
               <div class="menu_inner">
                 <ul class="menu-list primary">
                   <li class="menu-item first"><a class="menu-link" href="#">Events</a></li>
@@ -416,5 +416,45 @@
     <!--  /FOOTER  -->
   </div>
   <!--  /BODY : INNER  -->
+  <script type="text/javascript">
+    init();
+
+    function init(){
+      console.log("lets begin");
+      setEvents();
+      function setEvents(){
+        setMenuToggle();
+      };
+    };
+
+
+    function setMenuToggle(){
+      var menuButton = document.getElementById("js_menu");
+      console.log("setting menu event");
+      menuButton.addEventListener("click", toggleMenu);
+    };
+
+    function toggleMenu(){
+      var body = document.body;
+      var classNameList = ["menu_closed", "menu_open"];
+      classNameList = ( hasClass(body, classNameList[1]) ) ? classNameList.reverse() : classNameList;
+
+      console.log("toggling menu attr from " + classNameList[0] + " to " + classNameList[1]);
+      replaceClass(body, classNameList);
+    };
+
+
+    // -----------------------------
+    // HELPER FUNCTIONS: 
+
+    function replaceClass(el, clsList) {
+       var reg = new RegExp('(\\s|^)'+ clsList[0] +'(\\s|$)');
+       el.className = el.className.replace(reg, " " + clsList[1]).trim();
+    };
+
+    function hasClass(element, cls) {
+      return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    };
+  </script>
 </body>
 </html>
