@@ -11,6 +11,7 @@ jx.define('jx.controllers.index', {
       }
     });
     this.videoDesired = true // THIS BECOMES SOME SERVER VARIABLE
+    this.navAnimating = false;
   },
   onLogScroll: function(element, e) {
     e.preventDefault();
@@ -21,35 +22,44 @@ jx.define('jx.controllers.index', {
     // starting code can go here
   },
   onToggleNav: function(element, e) {
-    var navWidth = $(".menu.menu-container").width();
+    var that = this;
+    if (!this.navAnimating) {
+      this.navAnimating = true;
+      var navWidth = $(".menu.menu-container").width();
+      //Change the hamburger styling/animate
+      $(element).toggleClass("open");  
 
-    //Change the hamburger styling/animate
-    $(element).toggleClass("open");  
-
-    // If the nav is hidden
-    if ($(".menu.menu-container").hasClass("mod_hide")) {
-      // First pop the menu off screen
-      $(".menu.menu-container").css({
-        "right": "-=" + navWidth
-      });
-      // Set it to visible
-      $(".menu.menu-container").toggleClass("mod_hide");
-      // Then animate in
-      $(".menu.menu-container").animate({
-        "right": "+=" + navWidth
-      }, 400);
-    } else {
-      // Animate out
-      $(".menu.menu-container").animate({
-        "right": "-=" + navWidth
-      }, 400, function() {
-        // Set it to hidden
-        $(".menu.menu-container").toggleClass("mod_hide");
-        // Then pop back to original position
+      // If the nav is hidden
+      if ($(".menu.menu-container").hasClass("mod_hide")) {
+        // First pop the menu off screen
         $(".menu.menu-container").css({
+          "right": "-=" + navWidth
+        });
+        // Set it to visible
+        $(".menu.menu-container").toggleClass("mod_hide");
+        // Then animate in
+        $(".menu.menu-container").animate({
           "right": "+=" + navWidth
-        });  
-      });
+        }, 400, function() {
+          //Reset
+          that.navAnimating = false;
+        });
+      } else {
+        // Animate out
+        $(".menu.menu-container").animate({
+          "right": "-=" + navWidth
+        }, 400, function() {
+          // Set it to hidden
+          $(".menu.menu-container").toggleClass("mod_hide");
+          // Then pop back to original position
+          $(".menu.menu-container").css({
+            "right": "+=" + navWidth
+          });
+          //Reset
+          that.navAnimating = false;  
+        });
+      }
+      
     }
   },
   onWindowResize: function(element, e) {
