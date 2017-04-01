@@ -1735,6 +1735,7 @@ figure.sixteen-nine-img img {
 
   .section.merchandise .section_inner {
     padding-top: 2vh;
+    padding-bottom: 40px;
   }
 
   .section.merchandise .section_inner:after {
