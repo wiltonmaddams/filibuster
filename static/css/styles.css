@@ -1805,6 +1805,10 @@ figure.sixteen-nine-img img {
     font-size: 16px;
   }
 
+  .section.events_list {
+    padding-bottom: 0px;
+  }
+
   .section.events_list .section_inner {
     max-width: 100%;
     padding: 0;
