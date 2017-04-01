@@ -317,27 +317,4 @@
   line-height: 20px;
 }
 
-/*.menu-item.first {
-  margin-bottom: 0px;
-}
-*/
-/*.menu-item .menu-link {
-  font-size: 40px;
-  font-weight: 700;
-  color: #000;
-}
-
-.menu-sub-list .menu-item {
-  margin-bottom: 10px;
-}
-
-.menu-sub-list .menu-item .menu-link {
-  color: #999;
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-}*/
-
-/* BREAK : MOBILE  */
-@media only screen and (max-width : 800px) {  }
 
