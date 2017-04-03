@@ -1,3 +1,5 @@
 .DS_Store
+nodemodules/
+filiserver.js
 assets/*.mp4
 assets/*.webm

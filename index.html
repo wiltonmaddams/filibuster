@@ -40,9 +40,15 @@
   <!--BEGIN JAVASCRIPT-->
 
   <!-- EXTERNAL LIBRARIES -->
+  <script type="text/javascript"
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
   <!-- END EXTERNAL LIBRARIES -->
 
   <!-- INTERNAL LIBRARIES -->
+  <script type="text/javascript" src="./static/js/jx.js"></script>
+  <script type="text/javascript" src="./static/js/jx.ajax.js"></script>
   <!-- END INTERNAL LIBRARIES -->
 
   <!--END JAVASCRIPT-->
@@ -103,11 +109,11 @@
     <!--  MAIN  -->
     <div class="main">
       <div class="section header-background"></div>
-      <div class="header-overlay bg-image" data-img-extensions='["horizontal_small"]' data-img-src="site_intro" style="background-image:url(./assets/site_cover_horizontal_large.png);"></div>
+      <div class="header-overlay bg-image" data-img-extensions='["horizontal_large", "horizontal_small"]' data-img-src="site_intro" style="background-image:url(./assets/site_cover_horizontal_large.png);"></div>
       <div class="overlay-cover right"></div>
       <div class="overlay-cover left"></div>
       <!-- Section : Intro  -->
-      <div class="section intro bg-image" data-img-extensions='["horizontal_small"]' data-img-src="site_intro" style="background-image:url(./assets/site_intro_horizontal_large_fx2.jpg);">
+      <div class="section intro bg-image" data-img-extensions='["horizontal_large_fx2", "horizontal_small"]' data-img-src="site_intro" style="background-image:url(./assets/site_intro_horizontal_large_fx2.jpg);">
         <div class="section_inner mod_center-content">
           <div class="star"><img class="icon_star white" src="./assets/star_white.svg" /></div>
           <div class="vertical-line"></div>
@@ -182,7 +188,7 @@
                 <div class="action_container secondary"><span class="action_link">Buy Tickets</span></div>
                 </a>
               </li>
-              <li class="content_item event fx bg-image" data-img-src="event_squadron" style="background-image:url(./assets/event_squadron_vertical.jpg);">
+              <li class="content_item event fx bg-image" data-img-src="event_squadron" style="background-image:url(./assets/event_squadron_vertical_fx.jpg);">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details">
@@ -284,7 +290,7 @@
           <h3 class="section-header primary half-rule">The Events</h3>
           <div class="content_container">
             <ul class="content_list">
-              <li class="content_item event first fx bg-image" data-img-extensions='["horizontal_small", "vertical"]' data-img-src="event_mating-call" style="background-image:url(./assets/event_mating-call_horizontal_small.jpg);">
+              <li class="content_item event first fx bg-image" data-img-extensions='["horizontal_large_fx", "horizontal_small", "vertical"]' data-img-src="event_mating-call" style="background-image:url(./assets/event_mating-call_horizontal_small.jpg);">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details mod_center-content">
@@ -294,7 +300,7 @@
                 <div class="action_container secondary"><span class="action_link">Learn More</span></div>
                 </a>
               </li>
-              <li class="content_item event fx bg-image" data-img-extensions='["horizontal_small", "vertical"]' data-img-src="event_sunset-sounds" style="background-image:url(./assets/event_sunset-sounds_horizontal_small.jpg);">
+              <li class="content_item event fx bg-image" data-img-extensions='["horizontal_large", "horizontal_small", "vertical"]' data-img-src="event_sunset-sounds" style="background-image:url(./assets/event_sunset-sounds_horizontal_small.jpg);">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details mod_center-content">
@@ -304,7 +310,7 @@
                 <div class="action_container secondary"><span class="action_link">Learn More</span></div>
                 </a>
               </li>
-              <li class="content_item event fx bg-image" data-img-extensions='["horizontal_small", "vertical"]' data-img-src="event_squadron" style="background-image:url(./assets/event_squadron_horizontal_small.jpg);">
+              <li class="content_item event fx bg-image" data-img-extensions='["horizontal_small", "vertical_fx"]' data-img-src="event_squadron" style="background-image:url(./assets/event_squadron_horizontal_small.jpg);">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details mod_center-content">
@@ -422,62 +428,7 @@
   </div>
   <!--  /BODY : INNER  -->
   <script type="text/javascript">
-    // GET STARTED: 
-    init();
 
-    function init(){
-      setEvents();
-      function setEvents(){
-        setResize();
-        setMenuToggle();
-      };
-    };
-
-    function setMenuToggle(){
-      var menuButton = document.getElementById("js_menu");
-      
-      menuButton.addEventListener("click", toggleMenu);
-    };
-
-    function toggleMenu(){
-      var body = document.body,
-          classNameList = ["menu_closed", "menu_open"];
-
-      classNameList = ( hasClass(body, classNameList[1]) ) ? classNameList.reverse() : classNameList;
-
-      replaceClass(body, classNameList);
-    };
-
-
-    function setResize(){
-      var resizeTimer,
-          body = document.body,
-          screenClasses = [
-            "screen-size_desktop_big", // over 1200
-            "screen-size_desktop", // 800 or higher
-            "screen-size_mobile" // under 800
-          ],
-          imageTypes = [
-            "background",
-            "vertical-start",
-            "vertical-only"
-          ]
-
-      function checkScreenSize() {
-        // console.log("casual resize check");
-        // hasClass(body, cls, spltCheck);
-
-        // TO-DO: 
-        // This should check the screen size of the window for one of the 3 sizes,
-        // Then it should cycle through the bg-image elements and check their data-img-extension array
-        // If there's more than one in that array, it should swap out the img ext for the next one down
-      };
-
-      window.addEventListener('resize', function(event){
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(checkScreenSize, 250);
-      });
-    };
 
 
     // -----------------------------
@@ -498,5 +449,6 @@
       }
     };
   </script>
+  <script type="text/javascript" src="./static/js/jx.controllers.index.js"></script>
 </body>
 </html>
