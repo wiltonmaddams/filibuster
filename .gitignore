@@ -1,5 +1,4 @@
 .DS_Store
-assets/ambient.mp4
 nodemodules/
 filiserver.js
 assets/*.mp4
