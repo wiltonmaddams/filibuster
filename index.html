@@ -108,12 +108,21 @@
 
     <!--  MAIN  -->
     <div class="main">
-      <div class="section header-background"></div>
-      <div class="header-overlay bg-image" data-img-extensions='["horizontal_large", "horizontal_small"]' data-img-src="site_intro" style="background-image:url(./assets/site_cover_horizontal_large.png);"></div>
+      <div class="video-wrap">
+        <video playsinline autoplay muted loop poster="../../Assets/site_intro_horizontal_large_fx2.jpg" id="bg-vid">
+        <source src="../../Assets/fili-loop-test.webm" type="video/webm">
+        <source src="../../Assets/fili-loop-test.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!--<div class="section header-background"></div>-->
+      <div class="header-overlay bg-image" data-img-extensions='["horizontal_large_fx2", "horizontal_small_fx"]' data-img-src="site_cover" style="background-image:url(./assets/site_cover_horizontal_large.png);">
+      </div>
       <div class="overlay-cover right"></div>
       <div class="overlay-cover left"></div>
+      <div class="spacer"></div>
+
       <!-- Section : Intro  -->
-      <div class="section intro bg-image" data-img-extensions='["horizontal_large_fx2", "horizontal_small"]' data-img-src="site_intro" style="background-image:url(./assets/site_intro_horizontal_large_fx2.jpg);">
+      <div class="section intro bg-image" data-img-extensions='["horizontal_large_fx2", "horizontal_small_fx"]' data-img-src="site_cover" style="background-image:url(./assets/site_intro_horizontal_large_fx2.jpg);">
         <div class="section_inner mod_center-content">
           <div class="star"><img class="icon_star white" src="./assets/star_white.svg" /></div>
           <div class="vertical-line"></div>
@@ -168,7 +177,7 @@
           <h3 class="section-header primary half-rule">The Filibuster Season</h3>
           <div class="content_container">
             <ul class="content_list">
-              <li class="content_item event first fx bg-image" data-img-src="mating-call" style="background-image:url(./assets/event_mating-call_vertical.jpg);">
+              <li class="content_item event first fx bg-image" data-img-src="event_mating-call" style="background-image:url(./assets/event_mating-call_vertical.jpg);">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details">
@@ -178,7 +187,7 @@
                 <div class="action_container secondary"><span class="action_link">Buy Tickets</span></div>
                 </a>
               </li>
-              <li class="content_item event fx bg-image" data-img-src="sunset-sounds" style="background-image:url(./assets/event_sunset-sounds_vertical.jpg);">
+              <li class="content_item event fx bg-image" data-img-src="event_sunset-sounds" style="background-image:url(./assets/event_sunset-sounds_vertical.jpg);">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details">
@@ -188,7 +197,7 @@
                 <div class="action_container secondary"><span class="action_link">Buy Tickets</span></div>
                 </a>
               </li>
-              <li class="content_item event fx bg-image" data-img-src="event_squadron" style="background-image:url(./assets/event_squadron_vertical_fx.jpg);">
+              <li class="content_item event fx bg-image" data-img-src="event_squadron" style="background-image:url(./assets/event_squadron_vertical.jpg);">
                 <a href="#" class="link_wrap">
                 <div class="gradient-overlay"></div>
                 <div class="event-details">
@@ -281,9 +290,6 @@
         </div>
       </div>
 
-
-      
-
       <!-- Section : Events List  -->
       <div class="section events_list">
         <div class="section_inner">
@@ -343,7 +349,7 @@
           <div class="content_container">
             <h4 class="title secondary"></h4>
             <ul class="content_list">
-              <li class="content_item past-event_item fx bg-image" data-img-extensions='["vertical"]' data-img-src="event_2016_feargarden" style="background-image:url(./assets/event_2016_feargarden_vertical.jpg);">
+              <li class="content_item past-event_item fx bg-image" data-img-extensions='["vertical"]' data-img-src="event_feargarden" style="background-image:url(./assets/event_2016_feargarden_vertical.jpg);">
                 <div class="gradient-overlay"></div>
                 <div class="icon_new-window"></div>
                 <div class="past-event">
@@ -427,28 +433,6 @@
     <!--  /FOOTER  -->
   </div>
   <!--  /BODY : INNER  -->
-  <script type="text/javascript">
-
-
-
-    // -----------------------------
-    // HELPER FUNCTIONS: 
-
-    function replaceClass(el, clsList) {
-       var reg = new RegExp('(\\s|^)'+ clsList[0] +'(\\s|$)');
-       el.className = el.className.replace(reg, " " + clsList[1]).trim();
-    };
-
-    function hasClass(element, cls, spltCheck) {
-      var spltCheck = spltCheck || false;
-      var elClass = element.className;
-      if (!spltCheck) {
-        return (' ' + elClass + ' ').indexOf(' ' + cls + ' ') > -1;
-      } else {
-        return (""+elClass).split(" ").indexOf(cls) >= 0;
-      }
-    };
-  </script>
   <script type="text/javascript" src="./static/js/jx.controllers.index.js"></script>
 </body>
 </html>

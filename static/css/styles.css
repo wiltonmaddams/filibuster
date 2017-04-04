@@ -1324,7 +1324,7 @@ figure.sixteen-nine-img img {
   left: 0;*/
   background-image: url(../../assets/site_intro_horizontal_large_fx2.jpg);
   background-size: cover;
-  background-position: fixed;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
@@ -1956,6 +1956,119 @@ figure.sixteen-nine-img img {
     }
 }
 
+
+
+
+/* SECTION : INTRO
+**********************/
+
+/*
+    V I D E O
+*/
+
+
+div.video-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0.75;
+  height: 100%;
+  width: 100%;
+}
+div.video-wrap video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+    /** TROY **/
+div.video-wrap video {
+    opacity: 1;
+    pointer-events: none;
+    -webkit-transition: opacity .6s ease-out;
+    -moz-transition: opacity .6s ease-out;
+    -o-transition: opacity .6s ease-out;
+    -ms-transition: opacity .6s ease-out;
+    transition: opacity .6s ease-out;
+    }
+div.video-wrap video.set {
+  opacity: 1;
+}
+/** END TROY **/
+
+
+div.video-wrap span.videobkg {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
+@media (min-aspect-ratio: 16/9) {
+    div.video-wrap video {
+        height: 300%;
+        top: -100%;
+        width: 106%;
+        left: -3%;
+        }
+    }
+@media (max-aspect-ratio: 16/9) {
+    div.video-wrap video {
+        width: 300%;
+        left: -100%;
+        height: 106%;
+        top: -3%;
+        }
+    }
+@supports (object-fit: cover) {
+  div.video-wrap video {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.section.intro {
+  padding-top: 50%;
+  background: rgb(255, 255, 255) transparent;
+  background: rgba(255, 255, 255, 0);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.section.intro .section-header {
+  margin-bottom: 0px;
+  padding-top: 0px;
+  font-weight: 700;
+}
+
+.section.intro .section-header,
+.section.intro .title {
+  text-shadow: 0px 1px 4px rgba(150, 150, 150, 1);
+}
+.spacer {
+  height: 100vh;
+  background: transparent;
+}
 
 
 

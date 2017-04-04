@@ -14,7 +14,7 @@ jx.define('jx.controllers.index', {
     this.navAnimating = false;
     this.SCREEN_SIZE_DESKTOP = 800;
     this.SCREEN_SIZE_DESKTOP_BIG = 1200;
-    this.SCREEN_SIZE_MOBILE = 800
+    this.SCREEN_SIZE_MOBILE = 799
   },
   onLogScroll: function(element, e) {
     e.preventDefault();
@@ -36,7 +36,7 @@ jx.define('jx.controllers.index', {
     if ((offsetY + bottomSpacer + 12) >= pageYStart
       && ((offsetY + bottomSpacer + 12) <= pageYEnd)) { // 25 is image height, change it halfway
       $("#home-icon").css("background-image", "url(../../assets/f_full_horizontal_black.png)");
-      $("#hamburger-nav span").css("border", "1px solid black"); 
+      $("#hamburger-nav span").css("border", "1px solid #333");
     } else {
       $("#home-icon").css("background-image", "url(../../assets/f_full_horizontal_white.png)");
       $("#hamburger-nav span").css("border", "1px solid white");  
@@ -53,51 +53,65 @@ jx.define('jx.controllers.index', {
     $("body").toggleClass("menu_open");
   },
   onSetBackgroundImages: function() {
+    var that = this;
     var width = $(window).width();
     var index;
-    var desiredSize; 
 
-    if (width < this.SCREEN_SIZE_MOBILE) {
-    console.log('mobile')
-      desiredSize = this.SCREEN_SIZE_MOBILE
+    if (width <= this.SCREEN_SIZE_MOBILE) {
+      this.desiredSize = this.SCREEN_SIZE_MOBILE
     } else if (width >= this.SCREEN_SIZE_DESKTOP_BIG) {
-    console.log('big desktop')
-      desiredSize = this.SCREEN_SIZE_DESKTOP_BIG
+      this.desiredSize = this.SCREEN_SIZE_DESKTOP_BIG
     } else if (width >= this.SCREEN_SIZE_DESKTOP) {
-    console.log('desktop')
-      desiredSize = this.SCREEN_SIZE_DESKTOP
+      this.desiredSize = this.SCREEN_SIZE_DESKTOP
     }
 
     $(".bg-image").each(function(index, element) {
-      var imageExtensions = $(element).attr("data-img-extensions");
-      if (imageExtensions) { // Could be undefined
-        imageExtensions = JSON.parse(imageExtensions);
+      var photoName;
 
-        switch (desiredSize) {
-          case this.SCREEN_SIZE_MOBILE:
-            index = imageExtensions.length - 1;
-            break;
-          case this.SCREEN_SIZE_DESKTOP:
-            var median = imageExtensions.length % 2; // Use modulo
-            index = imageExtensions[median];
-            break;
-          case this.SCREEN_SIZE_DESKTOP_BIG:
-            index = imageExtensions[0];
+      switch (that.desiredSize) {
+        case that.SCREEN_SIZE_MOBILE:
+          photoName = "vertical";
+          break;
+        case that.SCREEN_SIZE_DESKTOP:
+          photoName = "horizontal_small";
+          break;
+        case that.SCREEN_SIZE_DESKTOP_BIG:
+          photoName = "horizontal_large";
+          break;
+        default:
+          photoName = "vertical";
+      }
+
+      // EXCEPTIONS //////////
+
+
+
+      // Three sections have "fx" images
+      switch ($(element).attr("class")) {
+         case "section events_past bg-image":
+         case "section signup bg-image":
+         case "section intro bg-image":
+         console.log($(element).attr("class"))
+            photoName += "_fx";
             break;
           default:
-            index = imageExtensions.length - 1;
-        }
-        var photoName = imageExtensions[index]; // Always taking the last element for mobile
-        var backgroundImage = $(this).css('background-image');
-        console.log(index)
-        var backgroundImageURL = backgroundImage.replace('url(','').replace(')','');
-        var backgroundImageURLComponents = backgroundImageURL.split("/")
-        var fileName = backgroundImageURLComponents[backgroundImageURLComponents.length - 1];
-        var extension = fileName.split(".")[1].replace('"', "");
-//        console.log(fileName)
-        var backgroundURL = "./assets/" + $(element).attr("data-img-src") + "_" + photoName + "." + extension;
-        $(element).attr("style", "background-image:url(" + backgroundURL + ")");
+            break;
       }
+
+      // Past events have only one size
+      if ($(element).hasClass("past-event_item")) {
+        photoName = "vertical";
+      }
+
+      // END EXCEPTIONS //////
+      var extension = ".jpg"
+      if ($(element).attr("data-img-src") == "site_cover") {
+        extension = ".png"
+      }
+
+
+      var backgroundURL = "./assets/" + $(element).attr("data-img-src") + "_" + photoName + extension;
+      $(element).attr("style", "background-image:url(" + backgroundURL + ")");
     });
   },
   onWindowResize: function(element, e) {
