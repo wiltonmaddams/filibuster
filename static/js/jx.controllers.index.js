@@ -36,17 +36,24 @@ jx.define('jx.controllers.index', {
     if ((offsetY + bottomSpacer + 12) >= pageYStart
       && ((offsetY + bottomSpacer + 12) <= pageYEnd)) { // 25 is image height, change it halfway
       $("#home-icon").css("background-image", "url(../../assets/f_full_horizontal_black.png)");
-      $("#hamburger-nav span").css("border", "1px solid #333");
+      $("#hamburger-nav span").addClass("nav-dark");
     } else {
       $("#home-icon").css("background-image", "url(../../assets/f_full_horizontal_white.png)");
-      $("#hamburger-nav span").css("border", "1px solid white");  
+      $("#hamburger-nav span").removeClass("nav-dark");
     }
-    
-    // If wanting to use custom logic based on pageY position, put code here
   },
   onReady: function(element, e) {
     // Load the proper images for the viewport
     this.onSetBackgroundImages();
+
+    // Check for mobile and show/hide video appropriately
+    //Check to see that the user isn't on a mobile device first
+    var mobile = false;
+
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|Windows Phone|Tablet|PlayBook|BB10|SymbianOS|Silk/i.test(navigator.userAgent)) {
+      $(".video-wrap").hide();
+      $(".header-overlay").css("position", "relative");
+    }
   },
   onToggleMenu: function(element, e) {
     $("body").toggleClass("menu_closed");
@@ -83,8 +90,6 @@ jx.define('jx.controllers.index', {
       }
 
       // EXCEPTIONS //////////
-
-
 
       // Three sections have "fx" images
       switch ($(element).attr("class")) {

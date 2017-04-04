@@ -1318,6 +1318,14 @@ figure.sixteen-nine-img img {
   z-index: 12;
 }
 
+#hamburger-nav span.nav-dark {
+  border: 1px solid #333
+}
+
+#hamburger-nav span.nav-light {
+  border: 1px solid white;
+}
+
 .header-background {
 /*  position: absolute;
   top: 0;
