@@ -50,7 +50,7 @@ jx.define('jx.controllers.index', {
     //Check to see that the user isn't on a mobile device first
     var mobile = false;
 
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|Windows Phone|Tablet|PlayBook|BB10|SymbianOS|Silk/i.test(navigator.userAgent)) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|Windows Phone|Tablet|PlayBook|BB10|SymbianOS|Silk/i.test(navigator.userAgent)) {
       $(".video-wrap").hide();
       $(".header-overlay").css("position", "relative");
     }
@@ -111,7 +111,7 @@ jx.define('jx.controllers.index', {
 
       var extension = ".jpg"
       if ($(element).attr("data-img-src") == "site_cover") {
-        extension = ".png"
+        extension = (photoName == "small") ? "_trans.png" : ".png";
       }
 
       var backgroundURL = "./assets/" + $(element).attr("data-img-src") + "_" + photoName + extension;
