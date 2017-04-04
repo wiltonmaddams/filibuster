@@ -106,11 +106,14 @@ jx.define('jx.controllers.index', {
       // END EXCEPTIONS //////
       var extension = ".jpg"
       if ($(element).attr("data-img-src") == "site_cover") {
+        console.log(photoName)
         extension = ".png"
+
       }
 
 
       var backgroundURL = "./assets/" + $(element).attr("data-img-src") + "_" + photoName + extension;
+      console.log(backgroundURL)
       $(element).attr("style", "background-image:url(" + backgroundURL + ")");
     });
   },
