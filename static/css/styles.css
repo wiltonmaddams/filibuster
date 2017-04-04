@@ -1465,6 +1465,7 @@ figure.sixteen-nine-img img {
   position: absolute;
   top: 0;
   left: 0;
+  background-image:url(./assets/site_cover_horizontal_large.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1786,7 +1787,7 @@ figure.sixteen-nine-img img {
     background-color: #fff;*/
   }
   .header-overlay {
-    background-image: url(../../assets/intro_reverse.png);
+    background-image: url(../../assets/site_cover_vertical.png);
     height: 30vh;
     position: relative;
   }
