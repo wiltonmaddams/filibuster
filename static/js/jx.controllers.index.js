@@ -17,11 +17,11 @@ jx.define('jx.controllers.index', {
     this.SCREEN_SIZE_MOBILE = 799
   },
   onLogScroll: function(element, e) {
-    e.preventDefault();
     var offsetY = window.pageYOffset;
     var pageYStart = $(".about").position().top;
     var pageYEnd = $(".event_overview").position().top;
     var height = $(window).height();
+    var width = $(window).width();
     var bottomSpacer = 20; // Set by CSS
     
     // Change bottom link colors to black
@@ -31,14 +31,16 @@ jx.define('jx.controllers.index', {
     } else {
       $("li.nav-link > a").css("color", "white");  
     }
-
+    console.log('has')
     // Change hamburger nav and home image
+    var logoImageSize = (width <= this.SCREEN_SIZE_MOBILE) ? "stack" : "full"
     if ((offsetY + bottomSpacer + 12) >= pageYStart
       && ((offsetY + bottomSpacer + 12) <= pageYEnd)) { // 25 is image height, change it halfway
-      $("#home-icon").css("background-image", "url(../../assets/f_full_horizontal_black.png)");
+      var image = (width <= this.SCREEN_SIZE_MOBILE) ? "stack" : "full"
+      $("#home-icon").css("background-image", "url(../../assets/f_" + logoImageSize + "_horizontal_black.png)");
       $("#hamburger-nav span").addClass("nav-dark");
     } else {
-      $("#home-icon").css("background-image", "url(../../assets/f_full_horizontal_white.png)");
+      $("#home-icon").css("background-image", "url(../../assets/f_" + logoImageSize + "_horizontal_white.png)");
       $("#hamburger-nav span").removeClass("nav-dark");
     }
   },
@@ -120,5 +122,6 @@ jx.define('jx.controllers.index', {
   },
   onWindowResize: function(element, e) {
     this.onSetBackgroundImages();
+    this.onLogScroll();
   }
 });
