@@ -1076,7 +1076,7 @@ input {
 **********************************/
 
 .section.prompt_share {
-  min-height: 40vh;
+  min-height: auto;
 }
 
 .section.prompt_share .section_inner {
@@ -1136,6 +1136,7 @@ input {
   padding: 40px 0px 40px;
   min-height: 60vh;
   z-index: 11;
+/*  background-color: #333;*/
 }
 
 .menu_open .footer {
