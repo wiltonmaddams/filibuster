@@ -31,7 +31,7 @@ jx.define('jx.controllers.index', {
     } else {
       $("li.nav-link > a").css("color", "white");  
     }
-    console.log('has')
+
     // Change hamburger nav and home image
     var logoImageSize = (width <= this.SCREEN_SIZE_MOBILE) ? "stack" : "full"
     if ((offsetY + bottomSpacer + 12) >= pageYStart
