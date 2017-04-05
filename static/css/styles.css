@@ -1191,7 +1191,9 @@ input {
 
 .vertical-line {
   width: 1px;
-  height: 100px;
+  height: 10vh;
+  max-height: 100px;
+  min-height: 60px;
   background-color: #fff;
   margin: 0 auto;
 }
@@ -1465,6 +1467,7 @@ figure.sixteen-nine-img img {
   position: absolute;
   top: 0;
   left: 0;
+  background-image:url(../../assets/site_cover_horizontal_large.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1494,8 +1497,6 @@ figure.sixteen-nine-img img {
   right: auto;
   left: 0;
 }
-
-
 
 .nav-link {
   display: inline;
@@ -1745,8 +1746,14 @@ figure.sixteen-nine-img img {
     .overlay-cover {
       width: 40%;
     }
+
 }
 
+@media only screen and (min-width: 801px) {
+  .section, .video-wrap, .header-overlay, .overlay-cover, .spacer {
+    min-height: 350px;
+  }
+}
 
 /* BREAK : TABLET */
 @media only screen and (max-width : 1000px) {
@@ -1786,8 +1793,9 @@ figure.sixteen-nine-img img {
     background-color: #fff;*/
   }
   .header-overlay {
-    background-image: url(../../assets/intro_reverse.png);
+    background-image: url(../../assets/site_cover_vertical.png);
     height: 30vh;
+    min-height: 90px;
     position: relative;
   }
 
@@ -2078,7 +2086,7 @@ figure.sixteen-nine-img img {
 /* BREAK : SHALLOW VIEWPORTS */
 @media screen and ( max-height: 600px ){
     .overlay-cover {
-      width: 40%;
+      width: 35%;
     }
 }
 

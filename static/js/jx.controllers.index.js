@@ -10,7 +10,7 @@ jx.define('jx.controllers.index', {
         "click": this.onToggleMenu
       }
     });
-    this.videoDesired = true // THIS BECOMES SOME SERVER VARIABLE
+    this.videoDesired = true; // THIS BECOMES SOME SERVER VARIABLE
     this.navAnimating = false;
     this.SCREEN_SIZE_DESKTOP = 800;
     this.SCREEN_SIZE_DESKTOP_BIG = 1200;
@@ -21,7 +21,7 @@ jx.define('jx.controllers.index', {
     var pageYStart = $(".about").position().top;
     var pageYEnd = $(".event_overview").position().top;
     var height = $(window).height();
-    var width = $(window).width();
+    var width = $(window).width() + 15; // Account for scrollbar
     var bottomSpacer = 20; // Set by CSS
     
     // Change bottom link colors to black
@@ -50,7 +50,9 @@ jx.define('jx.controllers.index', {
 
     // Check for mobile and show/hide video appropriately
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|Windows Phone|Tablet|PlayBook|BB10|SymbianOS|Silk/i.test(navigator.userAgent)) {
-      $(".video-wrap").hide();
+      $(".video-wrap").addClass("bg-image");
+      $(".video-wrap > video").hide();
+      $(".spacer").hide();
       $(".header-overlay").css("position", "relative");
     }
   },
@@ -95,6 +97,7 @@ jx.define('jx.controllers.index', {
          case "section events_past bg-image":
          case "section signup bg-image":
          case "section intro bg-image":
+         case "video-wrap bg-image":
             photoName += "_fx";
             break;
           default:
