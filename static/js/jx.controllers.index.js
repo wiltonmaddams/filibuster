@@ -10,7 +10,7 @@ jx.define('jx.controllers.index', {
         "click": this.onToggleMenu
       }
     });
-    this.videoDesired = true // THIS BECOMES SOME SERVER VARIABLE
+    this.videoDesired = true; // THIS BECOMES SOME SERVER VARIABLE
     this.navAnimating = false;
     this.SCREEN_SIZE_DESKTOP = 800;
     this.SCREEN_SIZE_DESKTOP_BIG = 1200;

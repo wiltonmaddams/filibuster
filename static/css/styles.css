@@ -1191,7 +1191,9 @@ input {
 
 .vertical-line {
   width: 1px;
-  height: 100px;
+  height: 10vh;
+  max-height: 100px;
+  min-height: 60px;
   background-color: #fff;
   margin: 0 auto;
 }
@@ -1744,8 +1746,14 @@ figure.sixteen-nine-img img {
     .overlay-cover {
       width: 40%;
     }
+
 }
 
+@media only screen and (min-width: 801px) {
+  .section, .video-wrap, .header-overlay, .overlay-cover, .spacer {
+    min-height: 350px;
+  }
+}
 
 /* BREAK : TABLET */
 @media only screen and (max-width : 1000px) {
@@ -1787,6 +1795,7 @@ figure.sixteen-nine-img img {
   .header-overlay {
     background-image: url(../../assets/site_cover_vertical.png);
     height: 30vh;
+    min-height: 90px;
     position: relative;
   }
 
