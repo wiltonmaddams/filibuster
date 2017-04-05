@@ -1465,7 +1465,7 @@ figure.sixteen-nine-img img {
   position: absolute;
   top: 0;
   left: 0;
-  background-image:url(./assets/site_cover_horizontal_large.png);
+  background-image:url(../../assets/site_cover_horizontal_large.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1495,8 +1495,6 @@ figure.sixteen-nine-img img {
   right: auto;
   left: 0;
 }
-
-
 
 .nav-link {
   display: inline;
@@ -2079,7 +2077,7 @@ figure.sixteen-nine-img img {
 /* BREAK : SHALLOW VIEWPORTS */
 @media screen and ( max-height: 600px ){
     .overlay-cover {
-      width: 40%;
+      width: 35%;
     }
 }
 
